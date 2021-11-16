@@ -12,14 +12,14 @@ Here, you'll find the documentation for CodeWizardHQ's <em>Wizardlib</em> Python
 
 
 
-## add_audio(filename)
+## add_audio()
 
-Adds an audio file.
+<i>Adds an audio file.</i>
 
 <hr>
 
 Parameters:
-
+- `add_audio(filename)`
 - `filename` (`str`) : The filename.
 
 Returns:
@@ -38,14 +38,12 @@ audio_element = add_audio("never-gonna-give-you-up.mp3")
 
 
 
-## add_background(filename)
+## add_background()
 
-Adds a background image.
-
-<hr>
+<i>Adds a background image.</i>
 
 Parameters:
-
+- `add_background(filename)`
 - `filename` (`str`): The filename.
 
 Example usage:
@@ -69,14 +67,12 @@ Example output:
 
 
 
-## add_background_audio(filename)
+## add_background_audio()
 
-Adds background audio which plays when you click the *Start* button.
-
-<hr>
+<i>Adds background audio which plays when you click the *Start* button.</i>
 
 Parameters:
-
+- `add_background_audio(filename)`
 - `filename` (`str`): The filename.
 
 Example usage:
@@ -90,14 +86,12 @@ add_background_audio("never-gonna-give-you-up.mp3")
 
 
 
-## add_button(text)
+## add_button()
 
-Adds a button.
-
-<hr>
+<i>Adds a button.</i>
 
 Parameters:
-
+- `add_button(text)`
 - `text` (`str`): The text on the button.
 
 Returns:
@@ -124,14 +118,12 @@ Example output:
 
 
 
-## add_image(filename, size)
+## add_image()
 
-Adds an image to the page.
-
-<hr>
+<i>Adds an image to the page.</i>
 
 Parameters:
-
+- `add_image(filename, size)`
 - `filename` (`str`): The filename.
 - `size` (`int`): The size, in pixels (optional).
 
@@ -157,14 +149,12 @@ Example output:
 
 
 
-## add_text(text, size)
+## add_text()
 
-Adds text to the page.
-
-<hr>
+<i>Adds text to the page.</i>
 
 Parameters:
-
+- `add_text(text, size)`
 - `text` (`str`): The text to add to the page.
 - `size` (`int`): The size, in pixels (optional, defaults to 18).
 
@@ -191,14 +181,12 @@ Example output:
 
 
 
-## add_text_input(placeholder)
+## add_text_input()
 
-Adds a text input to the page.
-
-<hr>
+<i>Adds a text input to the page.</i>
 
 Parameters:
-
+- `add_text_input(placeholder)`
 - `placeholder` (`str`): The text to display in the input box.
 
 Returns:
@@ -223,14 +211,12 @@ Example output:
 
 
 
-## animate_down(element, distance, time, loop)
+## animate_down()
 
-Animates the `element` down by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates down and up repeatedly.
-
-<hr>
+<i>Animates the `element` down by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates down and up repeatedly.</i>
 
 Parameters:
-
+- `animate_down(element, distance, time, loop)`
 - `element` (`element`): An element to animate.
 - `distance` (`int`): The distance the element should travel (in pixels).
 - `time` (`int`): The amount of seconds the animation should take (optional, defaults to 8).
@@ -256,14 +242,12 @@ Example output:
 
 
 
-## `animate_left(element, distance, time, loop)`
+## animate_left()
 
-Animates the `element` left by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates left and right repeatedly.
-
-<hr>
+<i>Animates the `element` left by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates left and right repeatedly.</i>
 
 Parameters:
-
+- `animate_left(element, distance, time, loop)`
 - `element` (`element`): An element to animate.
 - `distance` (`int`): The distance the element should travel (in pixels).
 - `time` (`int`): The amount of seconds the animation should take (optional, defaults to 8).
@@ -291,12 +275,10 @@ Example output:
 
 ## animate_right(element, distance, time, loop)
 
-Animates the `element` right by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates right and left repeatedly.
-
-<hr>
+<i>Animates the `element` right by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates right and left repeatedly.</i>
 
 Parameters:
-
+- `animate_right(element, distance, time, loop)`
 - `element` (`element`): An element to animate.
 - `distance` (`int`): The distance the element should travel (in pixels).
 - `time` (`int`): The amount of seconds the animation should take (optional, defaults to 8).
@@ -320,14 +302,12 @@ Example output:
 
 
 
-## animate_up(element, distance, time, loop)
+## animate_up()
 
-Animates the `element` up by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates up and down repeatedly.
-
-<hr>
+<i>Animates the `element` up by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates up and down repeatedly.</i>
 
 Parameters:
-
+- `animate_up(element, distance, time, loop)`
 - `element` (`element`): An element to animate.
 - `distance` (`int`): The distance the element should travel (in pixels).
 - `time` (`int`): The amount of seconds the animation should take (optional, defaults to 8).
@@ -353,14 +333,12 @@ Example output:
 
 
 
-## check_collision(element1, element2, function_to_run)
+## check_collision()
 
-If `element1` and `element2` collide, `function_to_run` is called.
-
-<hr>
+<i>If `element1` and `element2` collide, `function_to_run` is called.</i>
 
 Parameters:
-
+- `check_collision(element1, element2, function_to_run)`
 - `element1` (`element`): An element to check for collisions with.
 - `element2` (`element`): An element to check for collisions with.
 - `function_to_run` (`function`): The function to run if `element1` hits `element2`.
@@ -410,9 +388,7 @@ Example output:
 
 ## clear()
 
-Clear the page of all elements.
-
-<hr>
+<i>Clear the page of all elements.</i>
 
 Example usage:
 
@@ -444,14 +420,12 @@ Example output:
 
 
 
-## click(element, function_to_run)
+## click()
 
-Call `function_to_run` when `element` is clicked.
-
-<hr>
+<i>Call `function_to_run` when `element` is clicked.</i>
 
 Parameters:
-
+- `click(element, function_to_run)`
 - `element` (`element`): The element to click.
 - `function_to_run` (`function`): The function to run if `element` is clicked.
 
@@ -481,14 +455,12 @@ Example output:
 
 
 
-## fade_in(element)
+## fade_in()
 
-Fades the `element` from invisible to visible.
-
-<hr>
+<i>Fades the `element` from invisible to visible.</i>
 
 Parameters:
-
+- `fade_in(element)`
 - `element` (`element`): The element to fade in.
 
 Example usage:
@@ -521,12 +493,10 @@ Example output:
 
 ## fade_out(element)
 
-Fades the `element` from visible to invisible.
-
-<hr>
+<i>Fades the `element` from visible to invisible.</i>
 
 Parameters:
-
+- `fade_out(element)`
 - `element` (`element`): The element to fade out.
 
 Example usage:
@@ -556,14 +526,12 @@ Example output:
 
 
 
-## get_input_value(element)
+## get_input_value()
 
-Gets the value of the input `element`.
-
-<hr>
+<i>Gets the value of the input `element`.</i>
 
 Parameters:
-
+- `get_input_value(element)`
 - `element` (`element`): The element to get the value from.
 
 Example usage:
@@ -597,14 +565,12 @@ Example output:
 
 
 
-## keydown(function_to_run)
+## keydown()
 
-Runs `function_to_run` when a key is pressed. The key that is pressed will be passed as the first argument to `function_to_run` and will always be lowercase.
-
-<hr>
+<i>Runs `function_to_run` when a key is pressed. The key that is pressed will be passed as the first argument to `function_to_run` and will always be lowercase.</i>
 
 Parameters:
-
+- `keydown(function_to_run)`
 - `function_to_run` (`function`): The function to run when a key is pressed.
 
 Example usage:
@@ -632,14 +598,12 @@ Example output:
 
 
 
-## move_down(element, distance)
+## move_down()
 
-Moves the `element` down by the given `distance`.
-
-<hr>
+<i>Moves the `element` down by the given `distance`.</i>
 
 Parameters:
-
+- `move_down(element, distance)`
 - `element` (`element`): The element to move down.
 - `distance` (`int`): The distance the `element` should travel (in pixels).
 
@@ -675,14 +639,12 @@ Example output:
 
 
 
-## move_left(element, distance)
+## move_left()
 
-Moves the `element` left by the given `distance`.
-
-<hr>
+<i>Moves the `element` left by the given `distance`.</i>
 
 Parameters:
-
+- `move_left(element, distance)`
 - `element` (`element`): The element to move left.
 - `distance` (`int`): The distance the `element` should travel (in pixels).
 
@@ -718,14 +680,12 @@ Example output:
 
 
 
-## move_right(element, distance)
+## move_right()
 
-Moves the `element` right by the given `distance`.
-
-<hr>
+<i>Moves the `element` right by the given `distance`.</i>
 
 Parameters:
-
+- `move_right(element, distance)`
 - `element` (`element`): The element to move right.
 - `distance` (`int`): The distance the `element` should travel (in pixels).
 
@@ -761,14 +721,12 @@ Example output:
 
 
 
-## move_up(element, distance)
+## move_up()
 
-Moves the `element` up by the given `distance`.
-
-<hr>
+<i>Moves the `element` up by the given `distance`.</i>
 
 Parameters:
-
+- `move_up(element, distance)`
 - `element` (`element`): The element to move up.
 - `distance` (`int`): The distance the `element` should travel (in pixels).
 
@@ -804,14 +762,12 @@ Example output:
 
 
 
-## play_audio(element)
+## play_audio()
 
-Plays the audio that `element` represents.
-
-<hr>
+<i>Plays the audio that `element` represents.</i>
 
 Parameters:
-
+- `play_audio(element)`
 - `element` (`element`): The audio element to play.
 
 Example usage:
@@ -827,19 +783,17 @@ play_audio(laugh_audio)
 
 
 
-## position_element(element, x, y)
+## position_element()
 
-Position the `element` at the given `x` and `y` position. The `x` and `y` arguments can be any `int`, or one of the position helpers:
+<i>Position the `element` at the given `x` and `y` position. The `x` and `y` arguments can be any `int`, or one of the position helpers:</i>
 
 |Position | Helper1  | Helper2    | Helper3    |
 |---------|----------|------------|------------|
 |`x`      | `"left"` | `"center"` | `"right"`  |
 |`y`      | `"top"`  | `"center"` | `"bottom"` |
 
-<hr>
-
 Parameters:
-
+- `position_element(element, x, y)`
 - `element` (`element`): The element to position.
 - `x` (`int`|`str`): The desired x-position of the `element`.
 - `y` (`int`|`str`): The desired y-position of the `element`.
@@ -856,14 +810,12 @@ position_element(taco_image, "center", 400)
 
 
 
-## set_background_color(color)
+## set_background_color()
 
-Sets the background color of the page to `color`.
-
-<hr>
+<i>Sets the background color of the page to `color`.</i>
 
 Parameters:
-
+- `set_background_color(color)`
 - `color` (`str`): The desired background color.
 
 Example usage:
@@ -884,14 +836,12 @@ Example output:
 
 
 
-## set_element_width(element, width)
+## set_element_width()
 
-Sets the `element` to the given `width`.
-
-<hr>
+<i>Sets the `element` to the given `width`.</i>
 
 Parameters:
-
+- `set_element_width(element, width)`
 - `element` (`element`): The element to adjust.
 - `width` (`int`): The desired width of the `element`.
 
@@ -923,14 +873,12 @@ Example output:
 
 
 
-## set_font_size(element, font_size)
+## set_font_size()
 
-Sets the font size of the `element` to the given `font_size`.
-
-<hr>
+<i>Sets the font size of the `element` to the given `font_size`.</i>
 
 Parameters:
-
+- `set_font_size(element, font_size)`
 - `element` (`element`): The element to adjust.
 - `font_size` (`int`): The desired font_size of the `element`.
 
@@ -962,14 +910,12 @@ Example output:
 
 
 
-## set_text_color(text_element, color)
+## set_text_color()
 
-Sets the `color` of the `text_element`.
-
-<hr>
+<i>Sets the `color` of the `text_element`.</i>
 
 Parameters:
-
+- `set_text_color(text_element, color)`
 - `text_element` (`element`): The text element to adjust.
 - `color` (`str`): The desired color of the `text_element`.
 
@@ -992,14 +938,12 @@ Example output:
 
 
 
-## set_text_decoration(text_element, decoration_string)
+## set_text_decoration()
 
-Sets the text decoration of the given `text_element`.
-
-<hr>
+<i>Sets the text decoration of the given `text_element`.</i>
 
 Parameters:
-
+- `set_text_decoration(text_element, decoration_string)`
 - `text_element` (`element`): The text element to adjust.
 - `decoration_string` (`str`): The decoration string for the CSS property.
 
@@ -1024,14 +968,12 @@ Read about different options for the decoration_string [here](https://developer.
 
 
 
-## set_timeout(function_to_run, time)
+## set_timeout()
 
-Runs `function_to_run` after `time` seconds.
-
-<hr>
+<i>Runs `function_to_run` after `time` seconds.</i>
 
 Parameters:
-
+- `set_timeout(function_to_run, time)`
 - `function_to_run` (`function`): The function to run.
 - `time` (`int`): The time (in seconds) to wait before running the `function_to_run`.
 
@@ -1058,14 +1000,12 @@ Example output:
 
 
 
-## update_text(text_element, new_text)
+## update_text()
 
-Changes the text in `text_element` to the `new_text`.
-
-<hr>
+<i>Changes the text in `text_element` to the `new_text`.</i>
 
 Parameters:
-
+- `update_text(text_element, new_text)`
 - `text_element` (`element`): The element to adjust.
 - `new_text` (`str`): The new text for the `text_element`.
 
@@ -1097,14 +1037,12 @@ Example output:
 
 
 
-## remove_element(element)
+## remove_element()
 
-Removes the `element` from the page.
-
-<hr>
+<i>Removes the `element` from the page.</i>
 
 Parameters:
-
+- `remove_element(element)`
 - `element` (`element`): The element to remove.
 
 Example usage:
@@ -1135,14 +1073,12 @@ Example output:
 
 
 
-## rotate_element(element, degrees)
+## rotate_element()
 
-Rotates the `element` by the given number of `degrees`.
-
-<hr>
+<i>Rotates the `element` by the given number of `degrees`.</i>
 
 Parameters:
-
+- `rotate_element(element, degrees)`
 - `element` (`element`): The element to rotate.
 - `degrees` (`int`): The number of degrees to rotate the `element`. 
 
@@ -1174,14 +1110,12 @@ Example output:
 
 
 
-## vanish(element)
+## vanish()
 
-Removes the `element` from the page over a 1 second interval.
-
-<hr>
+<i>Removes the `element` from the page over a 1 second interval.</i>
 
 Parameters:
-
+- `vanish(element)`
 - `element` (`element`): The element to remove.
 
 Example usage:
