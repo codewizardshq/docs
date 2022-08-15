@@ -12,6 +12,9 @@ copyright: Copyright &copy; 2016 - 2022 CodeWizardsHQ
 extra:
   # Removes the "Made with MkDocs" from the footer
   generator: false
+  analytics:
+    provider: google
+    property: G-JR29D20SDK
 
 # GitHub Repo config
 repo_url: https://github.com/codewizardshq/docs
