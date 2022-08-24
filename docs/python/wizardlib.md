@@ -66,8 +66,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `add_background_audio()`
 
 Adds background audio which plays when you click the _Start_ button.
@@ -125,8 +123,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `add_image()`
 
 Adds an image to the page.
@@ -160,8 +156,6 @@ Example output:
 ![add_image() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/taco.jpg?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `add_text()`
 
@@ -197,8 +191,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `add_text_input()`
 
 Adds a text input to the page.
@@ -231,8 +223,6 @@ Example output:
 ![add_text_input() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/add-text-input-example.png?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `animate_down()`
 
@@ -267,8 +257,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `animate_left()`
 
 Animates the `element` left by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates left and right repeatedly.
@@ -301,8 +289,6 @@ Example output:
 ![animate_left() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-left.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `animate_right()`
 
@@ -337,8 +323,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `animate_up()`
 
 Animates the `element` up by the given `distance`. Can optionally change the amount of time the animation takes and whether the `element` animates up and down repeatedly.
@@ -371,8 +355,6 @@ Example output:
 ![animate_up() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-up.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `check_collision()`
 
@@ -430,8 +412,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `clear()`
 
 Clear the page of all elements.
@@ -468,8 +448,6 @@ Example output:
 ![clear() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/clear.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `click()`
 
@@ -508,8 +486,6 @@ Example output:
 ![click() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/click.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `fade_in()`
 
@@ -550,8 +526,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `fade_out()`
 
 Fades the `element` from visible to invisible.
@@ -589,8 +563,6 @@ Example output:
 ![fade_out() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/fade-out.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `get_input_value()`
 
@@ -634,8 +606,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `keydown()`
 
 Runs `function_to_run` when a key is pressed. The key that is pressed will be passed as the first argument to `function_to_run` and will always be lowercase.
@@ -671,8 +641,6 @@ Example output:
 ![keydown() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/keydown.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `move_down()`
 
@@ -718,8 +686,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `move_left()`
 
 Moves the `element` left by the given `distance`.
@@ -763,8 +729,6 @@ Example output:
 ![move_left() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-left.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `move_right()`
 
@@ -810,8 +774,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `move_up()`
 
 Moves the `element` up by the given `distance`.
@@ -855,8 +817,6 @@ Example output:
 ![move_up() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-up.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `play_audio()`
 
@@ -944,8 +904,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `set_element_width()`
 
 Sets the `element` to the given `width`.
@@ -985,8 +943,6 @@ Example output:
 ![set_element_width() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-element-width.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `set_font_size()`
 
@@ -1063,7 +1019,6 @@ Example output:
 ![`set_interval()` example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-interval.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-<hr>
 
 ### `set_text_color()`
 
@@ -1095,8 +1050,6 @@ Example output:
 ![set_text_color() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-text-color.png?raw=true){ width="200" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `set_text_decoration()`
 
@@ -1130,8 +1083,6 @@ Example output:
 </figure>
 
 Read about different options for the decoration_string [here](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
-
-<hr>
 
 ### `set_timeout()`
 
@@ -1167,8 +1118,6 @@ Example output:
 ![set_timeout() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-timeout.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `update_text()`
 
@@ -1210,8 +1159,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `remove_element()`
 
 Removes the `element` from the page.
@@ -1250,8 +1197,6 @@ Example output:
 ![remove_element() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/remove-element.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
 
 ### `rotate_element()`
 
@@ -1293,8 +1238,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `vanish()`
 
 Removes the `element` from the page over a 1 second interval.
@@ -1333,5 +1276,3 @@ Example output:
 ![vanish() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/vanish.gif?raw=true){ width="300" }
 <figcaption></figcaption>
 </figure>
-
-<hr>
