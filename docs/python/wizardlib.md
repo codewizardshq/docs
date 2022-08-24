@@ -1028,6 +1028,41 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
+### `set_interval()`
+
+Runs `function_to_run` every `time` seconds.
+
+<hr>
+
+Function signature:
+
+```python
+set_interval(function_to_run, time)
+```
+
+Parameters:
+
+-   `function_to_run` (`function`): The function to run.
+-   `time` (`int`): The time (in seconds) to wait before running the `function_to_run`.
+
+Example usage:
+
+```python
+def create_ship():
+    ship = add_image("ship.png", 100)
+    position_element(ship, 200, 100)
+    animate_right(ship, 2500, 10)
+
+
+set_interval(create_ship, 3)
+```
+
+Example output:
+
+<figure markdown>
+![`set_interval()` example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-interval.gif?raw=true){ width="300" }
+<figcaption></figcaption>
+</figure>
 <hr>
 
 ### `set_text_color()`
