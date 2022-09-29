@@ -356,8 +356,6 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
-<hr>
-
 ### `bound_element()`
 
 `bound_element()` allows you to keep an element, such as a piece of text or an image, inside of the screen while using animations or keyboard input.
@@ -382,7 +380,9 @@ position_element(wizard, start_x, start_y)
 bound_element(wizard)
 ```
 
-<hr>
+!!! note
+
+    `bound_element()` only works in lessons 1 thru 4 of the M14 Capstone course!
 
 ### `check_collision()`
 
