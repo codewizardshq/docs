@@ -356,6 +356,34 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
+### `bound_element()`
+
+`bound_element()` allows you to keep an element, such as a piece of text or an image, inside of the screen while using animations or keyboard input.
+
+<hr>
+
+Function signature:
+
+```python
+bound_element(element)
+```
+
+Parameters:
+
+-   `element` (`element`) : A text or image element you want to keep in the screen.
+
+Example usage:
+
+```python
+wizard = add_image("images/wizard.png", 100)
+position_element(wizard, start_x, start_y)
+bound_element(wizard)
+```
+
+!!! note
+
+    `bound_element()` only works in lessons 1 thru 4 of the M14 Capstone course!
+
 ### `check_collision()`
 
 If `element1` and `element2` collide, `function_to_run` is called.
