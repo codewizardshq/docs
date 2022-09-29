@@ -380,6 +380,13 @@ position_element(wizard, start_x, start_y)
 bound_element(wizard)
 ```
 
+Example output:
+
+<figure markdown>
+![bound_element() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/bound-element.gif?raw=true){ width="300" }
+<figcaption></figcaption>
+</figure>
+
 !!! note
 
     `bound_element()` only works in lessons 1 thru 4 of the M14 Capstone course!
