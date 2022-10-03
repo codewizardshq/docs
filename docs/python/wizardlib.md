@@ -1185,13 +1185,13 @@ position_element(game_over, "center", "center")
 set_text_font(game_over, "game")
 ```
 
-Available fonts:
-
--   game
--   lora
--   quicksand
--   roboto
--   nabla
+| Available Fonts |
+| --------------- |
+| game            |
+| lora            |
+| quicksand       |
+| roboto          |
+| nabla           |
 
 !!! note
 
