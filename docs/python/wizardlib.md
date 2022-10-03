@@ -641,6 +641,47 @@ Example output:
 <figcaption></figcaption>
 </figure>
 
+### `jump()`
+
+Makes an image or text element move up and down (in a jumping motion).
+
+<hr>
+
+Function signature:
+
+```python
+jump(element, jump_height, time)
+```
+
+Parameters:
+
+-   `element` (`element`): The element to make jump.
+-   `jump_height` (`int`): The height the element should jump.
+-   `time` (`int)`: The time (in seconds) that the element will be in the air during the jump (optional, default is 2 seconds).
+
+Example usage:
+
+```python
+def make_jump(key):
+    if key == " ":
+        jump(robot, 100, 1)
+
+robot = add_image("images/robot.png", 100)
+position_element(robot, 600, 200)
+keydown(make_jump)
+```
+
+Example output:
+
+<figure markdown>
+![jump() example](https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/jump.gif?raw=true){ width="300" }
+<figcaption></figcaption>
+</figure>
+
+!!! note
+
+    `jump()` only works in **E22: Logic with Python**.
+
 ### `keydown()`
 
 Runs `function_to_run` when a key is pressed. The key that is pressed will be passed as the first argument to `function_to_run` and will always be lowercase.
@@ -1118,6 +1159,43 @@ Example output:
 </figure>
 
 Read about different options for the decoration_string [here](https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration)
+
+### `set_text_font()`
+
+This function allows you to change the font of a text element in your program.
+
+<hr>
+
+Function signature:
+
+```python
+set_text_decoration(text_element, font_name)
+```
+
+Parameters:
+
+-   `text_element` (`element`): The text element to adjust.
+-   `font_name` (`str`): The font to use for the `text_element`.
+
+Example usage:
+
+```python
+game_over = add_text("GAME OVER", 20)
+position_element(game_over, "center", "center")
+set_text_font(game_over, "game")
+```
+
+Available fonts:
+
+-   game
+-   lora
+-   quicksand
+-   roboto
+-   nabla
+
+!!! note
+
+    `set_text_font()` only works in **E22: Logic with Python**
 
 ### `set_timeout()`
 
