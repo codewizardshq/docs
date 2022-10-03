@@ -1169,7 +1169,7 @@ This function allows you to change the font of a text element in your program.
 Function signature:
 
 ```python
-set_text_decoration(text_element, font_name)
+set_text_font(text_element, font_name)
 ```
 
 Parameters:
