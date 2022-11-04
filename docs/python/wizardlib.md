@@ -691,12 +691,17 @@ Runs `function_to_run` when a key is pressed. The key that is pressed will be pa
 Function signature:
 
 ```python
-keydown(function_to_run)
+keydown(function_to_run, fast=False)
 ```
 
 Parameters:
 
 -   `function_to_run` (`function`): The function to run when a key is pressed.
+-   `fast` (`bool`): Use this flag whenever you expect the user to quickly press and release keys for movement if you want smooth movement.
+
+!!! note
+
+    The `fast` flag is only available in courses that use `program.py` as their main application file.
 
 Example usage:
 
