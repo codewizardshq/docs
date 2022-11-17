@@ -1305,8 +1305,6 @@ Example Output:
 3 potato
 ```
 
-Note that the last number is 3 in the example above, not 4!
-
 ###### Using the `step` parameter of the `range()` function
 
 The `range()` function takes a third argument, `step`, which allows you to generate sequences of numbers separated by a given step:
@@ -1324,6 +1322,20 @@ Example Output:
 4
 7
 10
+```
+
+##### `round()`
+
+The `round()` function is used to round a decimal number (`float`) to an integer or to round a decimal number to a given number of digits after the decimal point:
+
+```python
+pi = 3.14159
+
+pi_integer = round(pi)
+print(pi_integer)  # 3
+
+pi_two_decimal_points = round(pi, 2)
+print(pi_two_decimal_points)  # 3.14
 ```
 
 ##### `sorted()`
