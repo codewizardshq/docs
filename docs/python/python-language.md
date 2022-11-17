@@ -1305,6 +1305,8 @@ Example Output:
 3 potato
 ```
 
+Note that the last number is 3 in the example above, not 4!
+
 ###### Using the `step` parameter of the `range()` function
 
 The `range()` function takes a third argument, `step`, which allows you to generate sequences of numbers separated by a given step:
