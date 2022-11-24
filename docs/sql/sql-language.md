@@ -18,6 +18,7 @@ You'll also find many _Further reading_ sections, which pull from these excellen
 -   [SQLBolt](https://sqlbolt.com/lesson/introduction)
 -   [SQLite Tutorial](https://www.sqlitetutorial.net/)
 -   [Python.org Documentation](https://www.python.org/doc/)
+-   [Mode SQL Tutorial](https://mode.com/sql-tutorial/)
 
 <hr>
 
@@ -525,6 +526,111 @@ The total price of all computers in the `products` table:
 **Further Reading**
 
 -   [SQLBolt - Queries with expressions](https://sqlbolt.com/lesson/select_queries_with_expressions)
+
+## CASE
+
+The `CASE` statement is similar to a chain of conditional statements in a language like Python or JavaScript. You use it to generate different values based on some condition. At CWHQ, we use the `CASE` statement to generate an additional column with a range of values generated from our other columns.
+
+Consider a shopping app where we want to rank products by their affordability. Any product that costs $100 or less is considered "Cheap", any product between $100 and $1000 is considered "Affordable", and anything else is "Expensive".
+
+Our `products` table has the following structure:
+
+```sql
+SELECT * FROM products;
+
+┌────────────┬──────────────────────────┬───────────────┬──────────────────┐
+│ product_id │       product_name       │ product_price │ product_category │
+├────────────┼──────────────────────────┼───────────────┼──────────────────┤
+│ 1          │ Dell XPS 17              │ 1599.99       │ Computers        │
+│ 2          │ Blue Snowball Microphone │ 99.5          │ Microphones      │
+│ 3          │ System76 Thelio B1       │ 1255.55       │ Computers        │
+│ 4          │ Logitech M1              │ 34.99         │ Accessories      │
+│ 5          │ Seagate S1 SSD           │ 88.75         │ Accessories      │
+│ 6          │ MacBook Pro 16           │ 2100.5        │ Computers        │
+│ 7          │ Rode Z28                 │ 275.99        │ Microphones      │
+│ 8          │ Lenovo ThinkPad          │ 950.75        │ Computers        │
+└────────────┴──────────────────────────┴───────────────┴──────────────────┘
+```
+
+Notice that there is no `affordability` column? We can create one and populate it with values based on the `product_price` by using the `CASE` statement and using `AS` to ensure the result is placed in a column called `affordability`.
+
+The `THEN` keyword is what populates the values in whatever column name we created with `END AS`. If you have an `ELSE` clause, it doesn't need a `THEN` clause.
+
+**Raw SQL**
+
+```sql
+SELECT product_name, product_price,
+CASE
+    WHEN product_price <= 100
+        THEN 'Cheap'
+    WHEN product_price > 100 AND product_price <= 1000
+        THEN 'Affordable'
+    ELSE
+        'Expensive'
+END AS affordability
+FROM products
+ORDER BY product_price;
+
+┌──────────────────────────┬───────────────┬───────────────┐
+│       product_name       │ product_price │ affordability │
+├──────────────────────────┼───────────────┼───────────────┤
+│ Logitech M1              │ 34.99         │ Cheap         │
+│ Seagate S1 SSD           │ 88.75         │ Cheap         │
+│ Blue Snowball Microphone │ 99.5          │ Cheap         │
+│ Rode Z28                 │ 275.99        │ Affordable    │
+│ Lenovo ThinkPad          │ 950.75        │ Affordable    │
+│ System76 Thelio B1       │ 1255.55       │ Expensive     │
+│ Dell XPS 17              │ 1599.99       │ Expensive     │
+│ MacBook Pro 16           │ 2100.5        │ Expensive     │
+└──────────────────────────┴───────────────┴───────────────┘
+```
+
+**Python + SQL**
+
+```python
+import sqlite3
+
+con = sqlite3.connect("products.db")
+sql = con.cursor()
+
+query = """
+    SELECT product_name, product_price,
+    CASE
+        WHEN product_price <= 100
+            THEN 'Cheap'
+        WHEN product_price > 100 AND product_price <= 1000
+            THEN 'Affordable'
+        ELSE
+            'Expensive'
+    END AS affordability
+    FROM products
+    ORDER BY product_price;
+"""
+
+result = sql.execute(query)
+rows = result.fetchall()
+
+for row in rows:
+    print(row)
+
+```
+
+**Output**
+
+```text
+('Logitech M1', 34.99, 'Cheap')
+('Seagate S1 SSD', 88.75, 'Cheap')
+('Blue Snowball Microphone', 99.5, 'Cheap')
+('Rode Z28', 275.99, 'Affordable')
+('Lenovo ThinkPad', 950.75, 'Affordable')
+('System76 Thelio B1', 1255.55, 'Expensive')
+('Dell XPS 17', 1599.99, 'Expensive')
+('MacBook Pro 16', 2100.5, 'Expensive')
+```
+
+**Further Reading**
+
+-   [Mode SQL Tutorial - SQL CASE](https://mode.com/sql-tutorial/sql-case/)
 
 ## Concatenation
 
