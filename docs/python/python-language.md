@@ -2089,6 +2089,31 @@ def update_score():
     score = score + 1	# 1
 ```
 
+### Using literals instead of variables
+
+You don't always need a variable to hold a value. If you're only going to use a value in a single place, it may make more sense to use the bare value (called a _literal_ value) instead.
+
+For example, in this program, a random item is chosen from the `favorite_foods` `list`:
+
+```python
+from random import choice
+
+favorite_foods = ["taco", "pizza", "fries"]
+random_food = choice(favorite_foods)
+```
+
+If we're not going to use the `favorite_foods` `list` anywhere else in our program, we could write the same logic like this:
+
+```python
+from random import choice
+
+random_food = choice(["taco", "pizza", "fries"])
+```
+
+!!! note
+
+    This example exists to show you that you **can** use a value in place of a variable. It is almost always more appropriate to give a good variable name to a value instead of using the literal value.
+
 _Further Reading_
 
 -   [Real Python - Variables in Python](https://realpython.com/python-variables/)
