@@ -1950,6 +1950,20 @@ random_name = choice(names)
 print(random_name)  # dima
 ```
 
+##### `Shuffling the items in a sequence`
+
+The `shuffle()` function can be used to shuffle the items in a sequence (`list` or `str`). The function modifies the original sequence, so there's no return value.
+
+```python
+from random import shuffle
+
+# Get an integer between 1 and 10
+answers = ["Five", "Seven", "Eight"]
+shuffle(answers)
+
+print(answers)  # ['Seven', 'Eight', 'Five']
+```
+
 _Further Reading_
 
 -   [The Python Standard Library](https://docs.python.org/3/library/index.html)
