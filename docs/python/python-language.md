@@ -1957,7 +1957,6 @@ The `shuffle()` function can be used to shuffle the items in a sequence (`list` 
 ```python
 from random import shuffle
 
-# Get an integer between 1 and 10
 answers = ["Five", "Seven", "Eight"]
 shuffle(answers)
 
