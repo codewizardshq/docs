@@ -1921,6 +1921,22 @@ _Further Reading_
 
 Python comes with 100s of built-in modules. We'll briefly cover a few that are used often at CWHQ in this section. See the _Further Reading_ section for details on where you can browse all of Python's built-in modules.
 
+#### datetime
+
+The `datetime` module is used to work with times and dates.
+
+##### `Getting a today's date`
+
+You use the `date.today()` method to get today's date in the form **YYYY-MM-DD**:
+
+```python
+from datetime import date
+
+# Let's pretend it's February 10, 2023 for this example
+current_date = date.today()
+print(current_date)  # 2023-02-10
+```
+
 #### random
 
 The `random` module is used to add randomness to your programs.
