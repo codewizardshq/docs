@@ -5,6 +5,9 @@ Here, you'll find the documentation for CodeWizardHQ's <em>Wizardlib</em> Python
 | Elementary                           | Middle School                           |
 | ------------------------------------ | --------------------------------------- |
 | Programming Fundamentals with Python | Introduction to Programming with Python |
+| Logic with Python                    | Wizard Level 1 Capstone                 |
+| Modular Programming with Python      |                                         |
+| Wizard Level 2 Capstone              |                                         |
 | Python Game Development              |                                         |
 
 <hr>
