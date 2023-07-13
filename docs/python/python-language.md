@@ -886,7 +886,7 @@ For example, the `key` argument can be a function to run on each item of the `li
 
 ```python
 names = ["Danielj", "alecg", "Dimas"]
-names.sort
+names.sort()
 
 # Notice how these aren't sorted correctly? Uppercase letters are "smaller"
 # than lowercase letters in the sorting algorithm that `sort()` uses!
