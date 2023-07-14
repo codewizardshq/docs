@@ -681,6 +681,28 @@ Example Output:
 🍔🍔🍔
 ```
 
+#### Splitting strings
+
+You can split strings into a `list` based on a separator string using the `str.split()` method. The separator is not included in the results:
+
+```python
+sentence = "I love coding so much!"
+
+# splitting on spaces makes a list of words
+words = sentence.split(" ")
+
+print(words) # ["I", "love", "coding", "so", "much!"]
+
+
+# splitting on a longer separator
+words2 = sentence.split("love")
+
+print(words2) ["I ", " coding so much!"]
+
+```
+
+
+
 _Further Reading_
 
 -   [The Python Library Reference - Text Sequence Type](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
@@ -845,6 +867,49 @@ Example Output:
 alecg is in the 'names' list
 samh is NOT in the 'names' list
 ```
+
+
+#### Sorting a `list`
+
+To sort the values in a list, use the `.sort()` method. The sort is in-place, which means it reorders the original list instead of making a copy:
+
+```python
+names = ["danielj", "alecg", "dimas"]
+names.sort()
+
+print(names)  # ['alecg', 'danielj', 'dimas']
+```
+
+You can pass keyword arguments to the `list.sort()` method  to customize the way the `list` is sorted.
+
+For example, the `key` argument can be a function to run on each item of the `list` before sorting:
+
+```python
+names = ["Danielj", "alecg", "Dimas"]
+names.sort()
+
+# Notice how these aren't sorted correctly? Uppercase letters are "smaller"
+# than lowercase letters in the sorting algorithm that `sort()` uses!
+print(names)  # ['Danielj', 'Dimas', 'alecg']
+
+names.sort(key=str.lower)
+
+# Now, everything is sorted correctly, and the original values haven't been
+# changed. `sort()` only uses the `key` function during the sorting process.
+print(names)  # ['alecg', 'Danielj', 'Dimas']
+```
+
+The `reverse` keyword argument of `list.sort()` is used to sort from high-to-low instead of low-to-high. It expects a `bool` value:
+
+```python
+names = ["danielj", "alecg", "dimas"]
+names.sort(reverse=True)
+
+print(names)  # ['dimas', 'danielj', 'alecg']
+```
+
+To see an alternative way of sorting, look up the built in `sorted()` function.
+
 
 _Further Reading_
 
@@ -1238,6 +1303,46 @@ print(names)  # ['danielj', 'alecg', 'dimas']
 
 jobs = list(staff.values())
 print(jobs)  # ['Curriculum Developer', 'Curriculum Instructor', 'Designer']
+```
+
+##### `open()`
+
+The `open()` function opens a file and returns it as a file object. It has two parameters `file` and `mode`.
+
+```python
+#opening "my_file.txt" in read mode
+file = open("my_file.txt", "r")
+
+contents = file.read()
+
+print(contents)
+
+file.close()
+```
+
+| Mode | Meaning                                                                                    | 
+|------|--------------------------------------------------------------------------------------------|
+| `"r"`    | Read-only mode                                                                             |
+| `"w"`    | Write mode. Will overwrite all data in the file or create a new one if it doesn't exist    |
+| `"a"`    | Append mode. Will add data to the end of the file, or create a new one if it doesn't exist |
+
+After you are finished with a file, call the `.close()` method.
+
+###### Looping through a file line by line
+
+To process the file contents line by line, you can use a `for` loop to go throught the `file` object
+
+```python
+file = open("recipes.txt", "r")
+
+counter = 0
+for line in file:
+    counter += 1
+    if "taco" in line:
+       print(f"found taco on line {counter}")
+    
+print(f"there are {counter} lines in the file")
+file.close()
 ```
 
 ##### `print()`
