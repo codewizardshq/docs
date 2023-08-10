@@ -701,8 +701,6 @@ print(words2) ["I ", " coding so much!"]
 
 ```
 
-
-
 _Further Reading_
 
 -   [The Python Library Reference - Text Sequence Type](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
@@ -868,7 +866,6 @@ alecg is in the 'names' list
 samh is NOT in the 'names' list
 ```
 
-
 #### Sorting a `list`
 
 To sort the values in a list, use the `.sort()` method. The sort is in-place, which means it reorders the original list instead of making a copy:
@@ -880,7 +877,7 @@ names.sort()
 print(names)  # ['alecg', 'danielj', 'dimas']
 ```
 
-You can pass keyword arguments to the `list.sort()` method  to customize the way the `list` is sorted.
+You can pass keyword arguments to the `list.sort()` method to customize the way the `list` is sorted.
 
 For example, the `key` argument can be a function to run on each item of the `list` before sorting:
 
@@ -909,7 +906,6 @@ print(names)  # ['dimas', 'danielj', 'alecg']
 ```
 
 To see an alternative way of sorting, look up the built in `sorted()` function.
-
 
 _Further Reading_
 
@@ -1320,11 +1316,11 @@ print(contents)
 file.close()
 ```
 
-| Mode | Meaning                                                                                    | 
-|------|--------------------------------------------------------------------------------------------|
-| `"r"`    | Read-only mode                                                                             |
-| `"w"`    | Write mode. Will overwrite all data in the file or create a new one if it doesn't exist    |
-| `"a"`    | Append mode. Will add data to the end of the file, or create a new one if it doesn't exist |
+| Mode  | Meaning                                                                                    |
+| ----- | ------------------------------------------------------------------------------------------ |
+| `"r"` | Read-only mode                                                                             |
+| `"w"` | Write mode. Will overwrite all data in the file or create a new one if it doesn't exist    |
+| `"a"` | Append mode. Will add data to the end of the file, or create a new one if it doesn't exist |
 
 After you are finished with a file, call the `.close()` method.
 
@@ -1340,7 +1336,7 @@ for line in file:
     counter += 1
     if "taco" in line:
        print(f"found taco on line {counter}")
-    
+
 print(f"there are {counter} lines in the file")
 file.close()
 ```
@@ -2088,6 +2084,195 @@ _Further Reading_
 
 -   [The Python Standard Library](https://docs.python.org/3/library/index.html)
 -   [The Python Standard Library - `random`](https://docs.python.org/3/library/random.html)
+
+#### sqlite3
+
+The `sqlite3` module is used to interact with SQLite databases from Python. This section will focus on the `sqlite3` module, and won't go into much detail on the SQL language at all. If you're interested in understanding SQL, check out the [SQL Language Docs](https://docs.codewizardshq.com/sql/sql-language/).
+
+The following examples will all reference a SQLite DB called `user-info.db` with a single table called `users` in the shape below:
+
+```sql
+┌─────────┬──────────┬────────────┐
+│ user_id │ username │  password  │
+├─────────┼──────────┼────────────┤
+│    1    │   djs    │ mypa$$word │
+├─────────┼──────────┼────────────┤
+│    2    │  django  │    w0ff    │
+├─────────┼──────────┼────────────┤
+│    3    │  alecg   │    c0de    │
+└─────────┴──────────┴────────────┘
+```
+
+##### `Connecting to a SQLite database from Python`
+
+To use the `sqlite3` module, you must first import it:
+
+```python
+import sqlite3
+```
+
+Once the `sqlite3` module is imported, you'll want to connect to a SQLite database. SQLite databases are just plain files, and the file extension is irrelevant (some people use `.db`, others `.sqlite3`, etc.).
+
+The `sqlite3.connect()` method is how you connect to a SQLite database. Note that it will create the database if it doesn't exist.
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+```
+
+Just like with files, you'll need to close the `connection` to a DB when you're done with it. The `connection.close()` method should be used for this purpose. Note that no further queries can be run against the DB after that line completes.
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+
+# Do some stuff with the DB...
+
+# When you're done with the DB connection, close it!
+connection.close()
+```
+
+##### `Executing SQL statements from Python`
+
+To execute a SQL statement from a Python script, you need to create a `cursor` from your `connection` using the `connection.cursor()` method:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+```
+
+One you've created the `cursor` object, you can use the `cursor.execute()` method to execute a SQL `query` (in the form of a Python `str`) against the DB you've connected to:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+query = """
+    CREATE TABLE IF NOT EXISTS users (
+        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    );
+"""
+
+cursor.execute(query)
+```
+
+##### `Modifying SQL DBs from Python`
+
+If your query modifies the database (as `INSERT`, `UPDATE`, and `DELETE` queries do) you'll need to use the `connection.commit()` method to ensure the changes are stored in the DB:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+query = """
+    INSERT INTO users (username, password) VALUES ("alexg", "r@wkcl!m3");
+"""
+
+cursor.execute(query) # Careful! The changes aren't stored in the DB yet...
+connection.commit()  # Now, the changes are stored in the DB!
+```
+
+The DB would look like this after the changes above, note that user `alexg` has been added:
+
+```sql
+┌─────────┬──────────┬────────────┐
+│ user_id │ username │  password  │
+├─────────┼──────────┼────────────┤
+│    1    │   djs    │ mypa$$word │
+├─────────┼──────────┼────────────┤
+│    2    │  django  │    w0ff    │
+├─────────┼──────────┼────────────┤
+│    3    │  alecg   │    c0de    │
+├─────────┼──────────┼────────────┤
+│    4    │  alexg   │ r@wkcl!m3  │
+└─────────┴──────────┴────────────┘
+```
+
+##### `Reading data from a SQL DB in Python`
+
+If you need to read data from a DB, then you'll have to fetch the results from the `cursor`.
+
+If you expect multiple results, `cursor.fetchall()` returns a `list` of `tuples`, where each `tuple` represents a row in the DB:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+query = """
+    SELECT * FROM users;
+"""
+
+cursor.execute(query)
+results = cursor.fetchall()
+```
+
+The `results` variable from the example above would have this form:
+
+```python
+[(1, 'djs', 'mypa$$word'), (2, 'django', 'w0ff'), (3, 'alecg', 'c0de')]
+```
+
+If you want a single result (usally when using a `WHERE` clause with an `=` comparison), you use the `cursor.fetchone()` method to get a single `tuple` result representing the selection (one or more columns) from your query:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+query = """
+    SELECT * FROM users WHERE username = "djs";
+"""
+
+cursor.execute(query)
+result = cursor.fetchone()
+```
+
+The `result` variable from the example above would have this form:
+
+```python
+(1, 'djs', 'mypa$$word')
+```
+
+##### `Getting the column names from a table`
+
+SQLite has a `PRAGMA` statement (often used as as a [table-valued function](https://www.sqlite.org/vtab.html#tabfunc2)) that allows you to query metadata about a table. Using `PRAGMA_TABLE_INFO` is a handy way to pull the column names (or other metadata about the columns such as column constraints) from a table using a simple `SELECT` query, as in the example below:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+query = """
+    SELECT name AS column_name FROM PRAGMA_TABLE_INFO("users");
+"""
+
+cursor.execute(query)
+result = cursor.fetchall()
+```
+
+The `result` variable from the above query would have this form:
+
+```python
+[('user_id',) ('username',) ('password',)]
+```
+
+_Further Reading_
+
+-   [The Python Standard Library - `sqlite3`](https://docs.python.org/3/library/sqlite3.html#module-sqlite3)
 
 <hr>
 
