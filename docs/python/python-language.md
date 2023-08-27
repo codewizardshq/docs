@@ -2164,6 +2164,61 @@ query = """
 cursor.execute(query)
 ```
 
+If you need to run multiple statements, you can use the `cursor.executescript()` method. It takes a `str` of the different SQL statements as an argument. Note that each statement must end with a semicolon when using `cursor.executescript()`:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+script = """
+    CREATE TABLE IF NOT EXISTS users (
+        user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+        username TEXT UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    );
+
+    INSERT INTO users (username, password) VALUES ('steve', 'm!necr@ft');
+    INSERT INTO users (username, password) VALUES ('mario', 'mu$hr00m@n');
+"""
+
+cursor.executescript(script)
+```
+
+When using `cursor.executescript()`, you can pull the `script` from a file as well:
+
+*script.sql*
+
+```sql
+CREATE TABLE IF NOT EXISTS users (
+    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT UNIQUE NOT NULL,
+    password TEXT NOT NULL
+);
+
+INSERT INTO users (username, password) VALUES ('steve', 'm!necr@ft');
+INSERT INTO users (username, password) VALUES ('mario', 'mu$hr00m@n');
+```
+
+*main.py*
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+cursor = connection.cursor()
+
+file = open("script.sql", "r")
+script = file.read()
+
+cursor.executescript(script)
+```
+
+!!! note
+
+    The `cursor.executescript()` method should only be used to do things like create tables, insert values, etc. You can't use it with `SELECT` statements.
+
 ##### `Modifying SQL DBs from Python`
 
 If your query modifies the database (as `INSERT`, `UPDATE`, and `DELETE` queries do) you'll need to use the `connection.commit()` method to ensure the changes are stored in the DB:
