@@ -701,6 +701,41 @@ print(words2) ["I ", " coding so much!"]
 
 ```
 
+
+### `None`
+
+The `None` data type represents the absence of a value. It is the default return value for any
+function without an explicit `return` statement:
+
+```python
+def say_hi():
+    print("Hello")
+    # Nothing is returned here...
+
+
+# Nothing is returned from `say_hi()`, so `return_value` holds `None`
+return_value = say_hi()
+print(return_value)  # None
+```
+
+If you use a `return` statement to exit a function early, but don't explicitly provide a value for
+the `return` statement, `None` is also returned.
+
+```python
+def divide(numerator, denominator):
+    if denominator == 0:
+        print("You can't divide by 0!")
+        # Implicitly returns `None`
+        return
+
+    return numerator / denominator
+
+
+quotient = divide(3, 0)
+print(quotient)  # None
+```
+
+
 _Further Reading_
 
 -   [The Python Library Reference - Text Sequence Type](https://docs.python.org/3/library/stdtypes.html#text-sequence-type-str)
@@ -2301,6 +2336,85 @@ The `result` variable from the example above would have this form:
 (1, 'djs', 'mypa$$word')
 ```
 
+###### Using Row Factories 
+
+Usually, fetched records from a SQLite DB are returned as a `list` of `tuples`, as you can see in
+the previous section. If you use a *row
+factory*, you'll get a `list` of `sqlite3.Row` objects instead:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+
+# Allows us to get sqlite3.Row objects as results of queries
+connection.row_factory = sqlite3.Row
+
+cursor = connection.cursor()
+
+query = """
+    SELECT * FROM users;
+"""
+
+cursor.execute(query)
+results = cursor.fetchall()
+
+for result in results:
+    print(result)
+
+```
+
+*output*
+
+```text
+<sqlite3.Row object at 0x7f82916e3c10>
+<sqlite3.Row object at 0x7f8290367790>
+<sqlite3.Row object at 0x7f8290367760>
+```
+
+These `sqlite3.Row` objects behave like `dict`s, so you can access the each resulting row using the
+column name instead of the index number:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("user-info.db")
+connection.row_factory = sqlite3.Row
+cursor = connection.cursor()
+
+
+query = """
+    SELECT * FROM users;
+"""
+
+cursor.execute(query)
+results = cursor.fetchall()
+
+for result in results:
+    print(dict(result))
+
+
+first_result = results[0]
+
+print(f"user_id: {first_result['user_id']}")
+print(f"username: {first_result['username']}")
+print(f"password: {first_result['password']}")
+```
+
+*output* 
+
+```text
+{'user_id': 1, 'username': 'djs', 'password': 'mypa$$word'}
+{'user_id': 2, 'username': 'django', 'password': 'w0ff'}
+{'user_id': 3, 'username': 'alecg', 'password': 'c0de'}
+user_id: 1
+username: djs
+password: mypa$$word
+```
+
+The advantage to using a *row factory* is that you don't need to know the order of the columns in a
+table to access specific columns. You can instead simply use the column name.
+
 ##### `Getting the column names from a table`
 
 SQLite has a `PRAGMA` statement (often used as as a [table-valued function](https://www.sqlite.org/vtab.html#tabfunc2)) that allows you to query metadata about a table. Using `PRAGMA_TABLE_INFO` is a handy way to pull the column names (or other metadata about the columns such as column constraints) from a table using a simple `SELECT` query, as in the example below:
@@ -2323,6 +2437,60 @@ The `result` variable from the above query would have this form:
 
 ```python
 [('user_id',) ('username',) ('password',)]
+```
+
+##### `Getting the primary key of last inserted row`
+
+When using an `AUTOINCREMENT` constraint on a `PRIMARY KEY` column, you let the SQLite DB create the
+`PRIMARY KEY` for each row as they are inserted. This means you won't know the `PRIMARY KEY` if you
+need to use it in further statements after a row has been inserted in the DB. 
+
+Using the `cursor.lastrowid` property, you can get the `PRIMARY KEY` of the last row to be inserted
+in the DB and use it in further statements:
+
+```python
+import sqlite3
+
+connection = sqlite3.connect("users.sqlite")
+cursor = connection.cursor()
+
+
+def select_all_users():
+    query = """
+        SELECT * FROM users;
+    """
+
+    cursor.execute(query)
+    results = cursor.fetchall()
+    print(results)
+
+
+print("Results before INSERT")
+select_all_users()
+
+
+query = """
+    INSERT INTO users (username, password) VALUES ('steve', 'm!n3cr@ft');
+"""
+
+cursor.execute(query)
+connection.commit()
+
+print("Results after INSERT")
+select_all_users()
+
+# Will give us the `user_id` of the last inserted user
+last_user_id = cursor.lastrowid
+
+print(f"The ID of the last row inserted is: {last_user_id}")
+```
+
+```text
+Results before INSERT
+[(1, 'djs', 'mypa$$word'), (2, 'django', 'w0ff'), (3, 'alecg', 'c0de')]
+Results after INSERT
+[(1, 'djs', 'mypa$$word'), (2, 'django', 'w0ff'), (3, 'alecg', 'c0de'), (4, 'steve', 'm!n3cr@ft')]
+The ID of the last row inserted is: 4
 ```
 
 _Further Reading_
