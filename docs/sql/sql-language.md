@@ -283,6 +283,116 @@ Total cost of all products:
 -   [SQLBolt - Queries with aggregates - Pt. 1](https://sqlbolt.com/lesson/select_queries_with_aggregates)
 -   [SQLite Tutorial - SQLite Aggregate Functions](https://www.sqlitetutorial.net/sqlite-aggregate-functions/)
 
+## Arithmetic Operators
+
+When writing queries, you may find that the table does not have a column for a certain value but has columns which could be used to calculate it. SQL supports arithmetic operations in selections and `WHERE` clauses. In a selection, this will add a column to the result which calculates the expression for each result.
+
+**Raw SQL**
+
+```sql
+SELECT name, price, price * 0.07 FROM products;
+
+┌───────────┬──────────┬─────────────────┐
+│ name      │ price    │  price * 0.07   │
+├───────────┼──────────┼─────────────────┤
+│ cookies   │ 10.00    │ 10.70           │
+│ ice cream │ 5.00     │ 5.35            │
+│ donuts    │ 7.00     │ 7.49            │
+└───────────┴──────────┴─────────────────┘
+
+```
+
+You can alias the calculated column using `AS` for a clearer output.
+
+**Raw SQL**
+```sql
+SELECT name, price, price * 0.07 AS sales_tax FROM products;
+
+┌───────────┬──────────┬─────────────────┐
+│ name      │ price    │  sales_tax      │
+├───────────┼──────────┼─────────────────┤
+│ cookies   │ 10.00    │ 0.70            │
+│ ice cream │ 5.00     │ 0.35            │
+│ donuts    │ 7.00     │ 0.49            │
+└───────────┴──────────┴─────────────────┘
+
+```
+
+The operations are also supported in `WHERE` clauses.
+
+
+```sql
+
+-- select all rows where tax is greater than 10 dollars
+SELECT * FROM products WHERE price * 0.07 > 10.00
+```
+
+## Subqueries
+
+A subquery, also known as a nested query or inner query, is a query that is embedded within another SQL query. Subqueries allow you to retrieve data from one or more tables and use that result within another query. They are an essential feature of SQL for performing complex queries and data manipulation.
+
+There are two primary types of subqueries:
+
+1. **Scalar Subquery**:
+A scalar subquery is a subquery that returns a single value. This type of subquery is typically used within a `SELECT` or `WHERE` clause to compare a single value with the result of the subquery.
+```sql
+-- Find the average salary of employees
+SELECT AVG(salary) FROM employees;
+┌────────────────┐
+| AVG(salary)    │ 
+├────────────────┤
+│ 85000          |
+└────────────────┘
+
+-- Use the above query in a subquery
+SELECT name, salary FROM employees 
+    WHERE salary > (SELECT AVG(salary) FROM employees);
+┌──────────┬─────────────┐
+│ name     │ salary      │ 
+├──────────┼─────────────┤
+│ Alice    │ 100000      │
+│ Bob      │ 90000       │
+│ Charlie  │ 85001       │
+└──────────┴─────────────┘
+
+```
+The subquery `SELECT AVG(salary) FROM employees` is a single, or scalar, value. When used in the `WHERE` clause, the full query finds all employees whose salary is greater than the average salary.
+
+2. **Table Subquery**:
+A table subquery, also known as a derived table or inline view, returns a result set (a table) that can be used in a `FROM` clause or joined with other tables in the main query.
+```sql
+
+-- Count the number of courses by the programming language they use
+SELECT language, COUNT(*) as num_courses 
+    FROM programming_courses GROUP BY language;
+┌──────────┬─────────────┐
+│ language │ num_courses │ 
+├──────────┼─────────────┤
+│ Python   │ 10          │
+│ HTML/CSS │ 6           │
+│ SQL      │ 3           │
+└──────────┴─────────────┘
+
+
+-- Using the above query in a subquery, we can use the MAX() function on the count column
+SELECT language, MAX(num_courses) FROM 
+    (SELECT language, COUNT(*) as num_courses 
+        FROM programming_courses GROUP BY language
+    ); 
+┌──────────┬──────────────────┐
+│ language │ MAX(num_courses) │ 
+├──────────┼──────────────────┤
+│ Python   │ 10               │
+└──────────┴──────────────────┘
+```
+
+**Further Reading**
+
+
+-   [SQL Subqueries - w3resource](https://www.w3resource.com/sql/subqueries/understanding-sql-subqueries.php)
+-   [SQL - Sub Queries - TutorialsPoint](https://www.tutorialspoint.com/sql/sql-sub-queries.htm)
+
+
 ## ALTER TABLE
 
 After creating a table, you may need to add or rename a column. The `ALTER TABLE` command allows you to do this.
