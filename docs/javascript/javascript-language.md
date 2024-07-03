@@ -1598,7 +1598,7 @@ To round a number up, use `Math.ceil()`:
 
 ```javascript
 var roundedNumber = Math.ceil(4.2);
-console.log(roundedNumber); // 4
+console.log(roundedNumber); // 5
 ```
 
 To round a number to the nearest integer, use `Math.round()`:
