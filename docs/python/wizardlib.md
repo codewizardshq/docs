@@ -2,9 +2,9 @@
 
 Here, you'll find the documentation for CodeWizardHQ's <em>Wizardlib</em> Python library. We use this library in the following courses:
 
-| Elementary                           | Middle School                           |
-| ------------------------------------ | --------------------------------------- |
-| Programming Fundamentals with Python | Introduction to Programming with Python |
+| Elementary                           | Middle School                           | High School            |
+| ------------------------------------ | --------------------------------------- |------------------------|
+| Programming Fundamentals with Python | Introduction to Programming with Python | Intro to Python        |
 | Logic with Python                    | Wizard Level 1 Capstone                 |
 | Modular Programming with Python      |                                         |
 | Wizard Level 2 Capstone              |                                         |
