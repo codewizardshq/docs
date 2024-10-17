@@ -1,0 +1,118 @@
+[data-md-color-scheme="slate"] {
+    --md-primary-fg-color: #252a33;
+    --md-primary-fg-color--light: #fff;
+    --md-primary-fg-color--dark: #252a33;
+    --md-primary-bg-color: #687785;
+    --md-default-bg-color: #1a1e24;
+    --md-accent-fg-color: #ffc844;
+    --md-typeset-a-color: #ffc844;
+    --md-default-fg-color--light: #ffc844;
+    --md-code-bg-color: #16191e;
+    --md-code-fg-color: #ffc844;
+    --md-code-hl-comment-color: #8a8a8a;
+    --md-code-hl-constant-color: #9383e2;
+    --md-code-hl-function-color: #c973d9;
+    --md-code-hl-generic-color: #ffc844;
+    --md-code-hl-keyword-color: #6791e0;
+    --md-code-hl-name-color: #ffc844;
+    --md-code-hl-number-color: #e6695b;
+    --md-code-hl-operator-color: #20b8a4;
+    --md-code-hl-punctuation-color: #ffffff;
+    --md-code-hl-special-color: #f06090;
+    --md-code-hl-string-color: #2fb170;
+    --md-code-hl-variable-color: #ffc844;
+    --md-footer-bg-color: #252a33;
+}
+
+.md-header__button.md-logo {
+    padding: 0.1rem;
+}
+
+body .md-header__button.md-logo img,
+body .md-header__button.md-logo svg {
+    fill: currentColor;
+    display: block;
+    height: 2.6rem;
+    width: 10rem;
+}
+
+body .md-nav__title {
+    color: #687785;
+}
+
+.md-typeset h2 {
+    color: #ffc844;
+    font-size: 1.5em;
+}
+
+.md-typeset h3,
+.md-typeset h3 code {
+    color: #a0cfff;
+    font-size: 1.4em;
+}
+
+.md-typeset h4 {
+    color: #a0cfff;
+    font-size: 1.3em;
+}
+
+.md-typeset h5 code {
+    color: #a0cfff;
+    font-size: 1.3em;
+    text-transform: none;
+}
+
+.md-typeset h6 {
+    color: #a0cfff;
+    font-size: 1em;
+}
+
+.md-footer__direction {
+    color: #ffffff;
+}
+
+.md-ellipsis {
+    color: #ffc844;
+}
+
+.md-content ul {
+    list-style: none;
+}
+
+.md-content ul li::before {
+    content: image-set(
+        "../assets/shieldPointer.png" 1x,
+        "../assets/shieldPointer@2x.png" 2x
+    );
+    color: #ffc844;
+    font-weight: bold;
+    font-size: 0.4rem;
+    display: inline-block;
+    width: 2.4em;
+    margin-left: -1em;
+    vertical-align: middle;
+}
+
+.md-typeset table:not([class]) th {
+    color: #687785;
+    text-transform: uppercase;
+    font-weight: 700;
+    min-width: 5rem;
+    padding: 0.9375em 1.25em;
+    vertical-align: middle;
+    background-color: #16191e;
+}
+
+.md-typeset table:not([class]) td {
+    vertical-align: middle;
+}
+
+.md-typeset h3:before,
+.md-typeset h4:before,
+.md-typeset h5:before {
+    content: "";
+    border-bottom: 0.05rem solid var(--md-default-fg-color--lightest);
+    width: 100%;
+    display: block;
+    margin: 42px auto 52px auto;
+}

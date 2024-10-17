@@ -1,0 +1,2524 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://docs.codewizardshq.com/python/wizardlib/">
+      
+      
+        <link rel="prev" href="../python-language/">
+      
+      
+        <link rel="next" href="../../sql/sql-language/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>Wizardlib - CodeWizardsHQ Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JR29D20SDK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JR29D20SDK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JR29D20SDK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#wizardlib" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CodeWizardsHQ Documentation" class="md-header__button md-logo" aria-label="CodeWizardsHQ Documentation" data-md-component="logo">
+      
+  <img src="../../assets/lightHorizontal.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CodeWizardsHQ Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Wizardlib
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/codewizardshq/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cwhq-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CodeWizardsHQ Documentation" class="md-nav__button md-logo" aria-label="CodeWizardsHQ Documentation" data-md-component="logo">
+      
+  <img src="../../assets/lightHorizontal.svg" alt="logo">
+
+    </a>
+    CodeWizardsHQ Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/codewizardshq/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cwhq-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../html/html/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTML Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/javascript-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/browser-apis-and-jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser APIs and jQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Wizardlib
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Wizardlib
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_background" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_background()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_background_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_background_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_button()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_image()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_text()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_text_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_text_input()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_down" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_down()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_left" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_left()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_right" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_right()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_up()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bound_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      bound_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check_collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_collision()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#click" class="md-nav__link">
+    <span class="md-ellipsis">
+      click()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      fade_in()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade_out" class="md-nav__link">
+    <span class="md-ellipsis">
+      fade_out()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_input_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_input_value()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keydown" class="md-nav__link">
+    <span class="md-ellipsis">
+      keydown()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_down" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_down()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_left" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_left()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_right" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_right()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_up()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      play_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      position_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_background_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_background_color()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_element_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_element_width()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_font_size()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_interval()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_color()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_decoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_decoration()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_font" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_font()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_timeout()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_text()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      rotate_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanish" class="md-nav__link">
+    <span class="md-ellipsis">
+      vanish()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/sql-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#add_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_background" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_background()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_background_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_background_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_button" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_button()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_image" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_image()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_text()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add_text_input" class="md-nav__link">
+    <span class="md-ellipsis">
+      add_text_input()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_down" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_down()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_left" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_left()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_right" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_right()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#animate_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      animate_up()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bound_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      bound_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check_collision" class="md-nav__link">
+    <span class="md-ellipsis">
+      check_collision()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clear" class="md-nav__link">
+    <span class="md-ellipsis">
+      clear()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#click" class="md-nav__link">
+    <span class="md-ellipsis">
+      click()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade_in" class="md-nav__link">
+    <span class="md-ellipsis">
+      fade_in()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fade_out" class="md-nav__link">
+    <span class="md-ellipsis">
+      fade_out()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#get_input_value" class="md-nav__link">
+    <span class="md-ellipsis">
+      get_input_value()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jump" class="md-nav__link">
+    <span class="md-ellipsis">
+      jump()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#keydown" class="md-nav__link">
+    <span class="md-ellipsis">
+      keydown()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_down" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_down()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_left" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_left()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_right" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_right()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#move_up" class="md-nav__link">
+    <span class="md-ellipsis">
+      move_up()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#play_audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      play_audio()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#position_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      position_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_background_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_background_color()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_element_width" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_element_width()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_font_size" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_font_size()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_interval" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_interval()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_color" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_color()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_decoration" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_decoration()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_text_font" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_text_font()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#set_timeout" class="md-nav__link">
+    <span class="md-ellipsis">
+      set_timeout()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update_text" class="md-nav__link">
+    <span class="md-ellipsis">
+      update_text()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#remove_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      remove_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rotate_element" class="md-nav__link">
+    <span class="md-ellipsis">
+      rotate_element()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanish" class="md-nav__link">
+    <span class="md-ellipsis">
+      vanish()
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="wizardlib">Wizardlib<a class="headerlink" href="#wizardlib" title="Permanent link">&para;</a></h1>
+<p>Here, you'll find the documentation for CodeWizardHQ's <em>Wizardlib</em> Python library. We use this library in the following courses:</p>
+<table>
+<thead>
+<tr>
+<th>Elementary</th>
+<th>Middle School</th>
+<th>High School</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Programming Fundamentals with Python</td>
+<td>Introduction to Programming with Python</td>
+<td>Intro to Python</td>
+</tr>
+<tr>
+<td>Logic with Python</td>
+<td>Wizard Level 1 Capstone</td>
+<td></td>
+</tr>
+<tr>
+<td>Modular Programming with Python</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Wizard Level 2 Capstone</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Python Game Development</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<h3 id="add_audio"><code>add_audio()</code><a class="headerlink" href="#add_audio" title="Permanent link">&para;</a></h3>
+<p>Adds an audio file.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_audio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (<code>str</code>) : The filename.</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>The audio element.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">audio_element</span> <span class="o">=</span> <span class="n">add_audio</span><span class="p">(</span><span class="s2">&quot;never-gonna-give-you-up.mp3&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+
+<h3 id="add_background"><code>add_background()</code><a class="headerlink" href="#add_background" title="Permanent link">&para;</a></h3>
+<p>Adds a background image.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_background</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (<code>str</code>): The filename.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_background</span><span class="p">(</span><span class="s2">&quot;flying-cats.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="add_background() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/flying-cats.jpg?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="add_background_audio"><code>add_background_audio()</code><a class="headerlink" href="#add_background_audio" title="Permanent link">&para;</a></h3>
+<p>Adds background audio which plays when you click the <em>Start</em> button.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_background_audio</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (<code>str</code>): The filename.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_background_audio</span><span class="p">(</span><span class="s2">&quot;never-gonna-give-you-up.mp3&quot;</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+
+<h3 id="add_button"><code>add_button()</code><a class="headerlink" href="#add_button" title="Permanent link">&para;</a></h3>
+<p>Adds a button.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_button</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text</code> (<code>str</code>): The text on the button.</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>The button element.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Click Me&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="add_button() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/button.png?raw=true" width="200" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="add_image"><code>add_image()</code><a class="headerlink" href="#add_image" title="Permanent link">&para;</a></h3>
+<p>Adds an image to the page.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_image</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>filename</code> (<code>str</code>): The filename.</li>
+<li><code>size</code> (<code>int</code>): The size, in pixels (optional).</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>The image element.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.png&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="add_image() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/taco.jpg?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="add_text"><code>add_text()</code><a class="headerlink" href="#add_text" title="Permanent link">&para;</a></h3>
+<p>Adds text to the page.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_text</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">size</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text</code> (<code>str</code>): The text to add to the page.</li>
+<li><code>size</code> (<code>int</code>): The size, in pixels (optional, defaults to 18).</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>The text element.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">wizardlib_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Wizardlib is cool!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="add_text() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/add-text-example.png?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="add_text_input"><code>add_text_input()</code><a class="headerlink" href="#add_text_input" title="Permanent link">&para;</a></h3>
+<p>Adds a text input to the page.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">add_text_input</span><span class="p">(</span><span class="n">placeholder</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>placeholder</code> (<code>str</code>): The text to display in the input box.</li>
+</ul>
+<p>Returns:</p>
+<ul>
+<li>The text input element.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">text_input</span> <span class="o">=</span> <span class="n">add_text_input</span><span class="p">(</span><span class="s2">&quot;Enter your password:&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="add_text_input() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/add-text-input-example.png?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="animate_down"><code>animate_down()</code><a class="headerlink" href="#animate_down" title="Permanent link">&para;</a></h3>
+<p>Animates the <code>element</code> down by the given <code>distance</code>. Can optionally change the amount of time the animation takes and whether the <code>element</code> animates down and up repeatedly.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">animate_down</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">loop</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): An element to animate.</li>
+<li><code>distance</code> (<code>int</code>): The distance the element should travel (in pixels).</li>
+<li><code>time</code> (<code>int</code>): The amount of seconds the animation should take (optional, defaults to 8).</li>
+<li><code>loop</code> (<code>bool</code>): Whether to repeatedly animate down and up (optional, defaults to <code>False</code>).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">)</span>
+<span class="n">animate_down</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="animate_down() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-down.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="animate_left"><code>animate_left()</code><a class="headerlink" href="#animate_left" title="Permanent link">&para;</a></h3>
+<p>Animates the <code>element</code> left by the given <code>distance</code>. Can optionally change the amount of time the animation takes and whether the <code>element</code> animates left and right repeatedly.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">animate_left</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">loop</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): An element to animate.</li>
+<li><code>distance</code> (<code>int</code>): The distance the element should travel (in pixels).</li>
+<li><code>time</code> (<code>int</code>): The amount of seconds the animation should take (optional, defaults to 8).</li>
+<li><code>loop</code> (<code>bool</code>): Whether to repeatedly animate left and right (optional, defaults to <code>False</code>).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">)</span>
+<span class="n">animate_left</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="animate_left() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-left.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="animate_right"><code>animate_right()</code><a class="headerlink" href="#animate_right" title="Permanent link">&para;</a></h3>
+<p>Animates the <code>element</code> right by the given <code>distance</code>. Can optionally change the amount of time the animation takes and whether the <code>element</code> animates right and left repeatedly.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">animate_right</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">loop</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): An element to animate.</li>
+<li><code>distance</code> (<code>int</code>): The distance the element should travel (in pixels).</li>
+<li><code>time</code> (<code>int</code>): The amount of seconds the animation should take (optional, defaults to 8).</li>
+<li><code>loop</code> (<code>bool</code>): Whether to repeatedly animate right and left (optional, defaults to <code>False</code>).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">)</span>
+<span class="n">animate_right</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="animate_right() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-right.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="animate_up"><code>animate_up()</code><a class="headerlink" href="#animate_up" title="Permanent link">&para;</a></h3>
+<p>Animates the <code>element</code> up by the given <code>distance</code>. Can optionally change the amount of time the animation takes and whether the <code>element</code> animates up and down repeatedly.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">animate_up</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">loop</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): An element to animate.</li>
+<li><code>distance</code> (<code>int</code>): The distance the element should travel (in pixels).</li>
+<li><code>time</code> (<code>int</code>): The amount of seconds the animation should take (optional, defaults to 8).</li>
+<li><code>loop</code> (<code>bool</code>): Whether to repeatedly animate up and down (optional, defaults to <code>False</code>).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">)</span>
+<span class="n">animate_up</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="animate_up() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/animate-up.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="bound_element"><code>bound_element()</code><a class="headerlink" href="#bound_element" title="Permanent link">&para;</a></h3>
+<p><code>bound_element()</code> allows you to keep an element, such as a piece of text or an image, inside of the screen while using animations or keyboard input.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">bound_element</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>) : A text or image element you want to keep in the screen.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">wizard</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;images/wizard.png&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">wizard</span><span class="p">,</span> <span class="n">start_x</span><span class="p">,</span> <span class="n">start_y</span><span class="p">)</span>
+<span class="n">bound_element</span><span class="p">(</span><span class="n">wizard</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="bound_element() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/bound-element.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>bound_element()</code> only works in lessons 1 thru 4 of the M14 Capstone course!</p>
+</div>
+<h3 id="check_collision"><code>check_collision()</code><a class="headerlink" href="#check_collision" title="Permanent link">&para;</a></h3>
+<p>If <code>element1</code> and <code>element2</code> collide, <code>function_to_run</code> is called.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">check_collision</span><span class="p">(</span><span class="n">element1</span><span class="p">,</span> <span class="n">element2</span><span class="p">,</span> <span class="n">function_to_run</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element1</code> (<code>element</code>): An element to check for collisions with.</li>
+<li><code>element2</code> (<code>element</code>): An element to check for collisions with.</li>
+<li><code>function_to_run</code> (<code>function</code>): The function to run if <code>element1</code> hits <code>element2</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">cat_caught_taco</span><span class="p">():</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;The kitty caught the taco!&quot;</span><span class="p">)</span>
+    <span class="n">position_element</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">move</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+        <span class="n">move_up</span><span class="p">(</span><span class="n">cat_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+        <span class="n">move_left</span><span class="p">(</span><span class="n">cat_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">move_down</span><span class="p">(</span><span class="n">cat_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">cat_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">cat_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;flying-cats.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">cat_image</span><span class="p">,</span> <span class="mi">700</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
+
+<span class="n">check_collision</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="n">cat_image</span><span class="p">,</span> <span class="n">cat_caught_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="check_collision() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/check-collision.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="clear"><code>clear()</code><a class="headerlink" href="#clear" title="Permanent link">&para;</a></h3>
+<p>Clear the page of all elements.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">clear</span><span class="p">()</span>
+</code></pre></div>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">clear_page</span><span class="p">():</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="n">after_clear_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Page was cleared&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+    <span class="n">position_element</span><span class="p">(</span><span class="n">after_clear_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+
+<span class="n">before_clear_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;This is on the page before clearing&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">before_clear_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">clear_page_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Clear Page&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">clear_page_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">clear_page_button</span><span class="p">,</span> <span class="n">clear_page</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="clear() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/clear.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="click"><code>click()</code><a class="headerlink" href="#click" title="Permanent link">&para;</a></h3>
+<p>Call <code>function_to_run</code> when <code>element</code> is clicked.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">click</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">function_to_run</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to click.</li>
+<li><code>function_to_run</code> (<code>function</code>): The function to run if <code>element</code> is clicked.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">show_text</span><span class="p">():</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Button was clicked!&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+    <span class="n">position_element</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+
+<span class="n">button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Click Me&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">button</span><span class="p">,</span> <span class="n">show_text</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="click() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/click.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="fade_in"><code>fade_in()</code><a class="headerlink" href="#fade_in" title="Permanent link">&para;</a></h3>
+<p>Fades the <code>element</code> from invisible to visible.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fade_in</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to fade in.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fade_text_in</span><span class="p">():</span>
+    <span class="n">fade_in</span><span class="p">(</span><span class="n">hidden_text</span><span class="p">)</span>
+
+
+<span class="n">hidden_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Hidden Text&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">hidden_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+<span class="n">fade_out</span><span class="p">(</span><span class="n">hidden_text</span><span class="p">)</span>
+
+<span class="n">fade_in_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Fade In&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">fade_in_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">click</span><span class="p">(</span><span class="n">fade_in_button</span><span class="p">,</span> <span class="n">fade_text_in</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="fade_in() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/fade-in.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="fade_out"><code>fade_out()</code><a class="headerlink" href="#fade_out" title="Permanent link">&para;</a></h3>
+<p>Fades the <code>element</code> from visible to invisible.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">fade_out</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to fade out.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">fade_text_out</span><span class="p">():</span>
+    <span class="n">fade_out</span><span class="p">(</span><span class="n">text_to_hide</span><span class="p">)</span>
+
+
+<span class="n">text_to_hide</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Text To Hide&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">text_to_hide</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">fade_out_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Fade Out&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">fade_out_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">click</span><span class="p">(</span><span class="n">fade_out_button</span><span class="p">,</span> <span class="n">fade_text_out</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="fade_out() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/fade-out.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="get_input_value"><code>get_input_value()</code><a class="headerlink" href="#get_input_value" title="Permanent link">&para;</a></h3>
+<p>Gets the value of the input <code>element</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">get_input_value</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to get the value from.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">login</span><span class="p">():</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="n">get_input_value</span><span class="p">(</span><span class="n">password_input</span><span class="p">)</span>
+    <span class="n">clear</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s2">&quot;secretpassword&quot;</span><span class="p">:</span>
+        <span class="n">logged_in_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;You&#39;ve logged in!&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+        <span class="n">position_element</span><span class="p">(</span><span class="n">logged_in_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+
+<span class="n">password_input</span> <span class="o">=</span> <span class="n">add_text_input</span><span class="p">(</span><span class="s2">&quot;Enter your password&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">password_input</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">login_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Login&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">login_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">click</span><span class="p">(</span><span class="n">login_button</span><span class="p">,</span> <span class="n">login</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="get_input_value() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/get-input-value.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="jump"><code>jump()</code><a class="headerlink" href="#jump" title="Permanent link">&para;</a></h3>
+<p>Makes an image or text element move up and down (in a jumping motion).</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">jump</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">jump_height</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to make jump.</li>
+<li><code>jump_height</code> (<code>int</code>): The height the element should jump.</li>
+<li><code>time</code> (<code>int)</code>: The time (in seconds) that the element will be in the air during the jump (optional, default is 2 seconds).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">make_jump</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s2">&quot; &quot;</span><span class="p">:</span>
+        <span class="n">jump</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+
+<span class="n">robot</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;images/robot.png&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">robot</span><span class="p">,</span> <span class="mi">600</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">keydown</span><span class="p">(</span><span class="n">make_jump</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="jump() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/jump.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>jump()</code> only works in <strong>E22: Logic with Python</strong>.</p>
+</div>
+<h3 id="keydown"><code>keydown()</code><a class="headerlink" href="#keydown" title="Permanent link">&para;</a></h3>
+<p>Runs <code>function_to_run</code> when a key is pressed. The key that is pressed will be passed as the first argument to <code>function_to_run</code> and will always be lowercase.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">keydown</span><span class="p">(</span><span class="n">function_to_run</span><span class="p">,</span> <span class="n">fast</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>function_to_run</code> (<code>function</code>): The function to run when a key is pressed.</li>
+<li><code>fast</code> (<code>bool</code>): Use this flag whenever you expect the user to quickly press and release keys for movement if you want smooth movement.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code>fast</code> flag is only available in courses that use <code>program.py</code> as their main application file.</p>
+</div>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">key_logger</span><span class="p">(</span><span class="n">pressed_key</span><span class="p">):</span>
+    <span class="n">update_text</span><span class="p">(</span><span class="n">last_key_pressed_text</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Last key pressed: </span><span class="si">{</span><span class="n">pressed_key</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+
+<span class="n">last_key_pressed_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Last key pressed: &quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">last_key_pressed_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">key_logger</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="keydown() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/keydown.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="move_down"><code>move_down()</code><a class="headerlink" href="#move_down" title="Permanent link">&para;</a></h3>
+<p>Moves the <code>element</code> down by the given <code>distance</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">move_down</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to move down.</li>
+<li><code>distance</code> (<code>int</code>): The distance the <code>element</code> should travel (in pixels).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">move_taco</span><span class="p">(</span><span class="n">pressed_key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+        <span class="n">move_up</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+        <span class="n">move_left</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">move_down</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">move_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="move_down() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-down.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="move_left"><code>move_left()</code><a class="headerlink" href="#move_left" title="Permanent link">&para;</a></h3>
+<p>Moves the <code>element</code> left by the given <code>distance</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">move_left</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to move left.</li>
+<li><code>distance</code> (<code>int</code>): The distance the <code>element</code> should travel (in pixels).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">move_taco</span><span class="p">(</span><span class="n">pressed_key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+        <span class="n">move_up</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+        <span class="n">move_left</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">move_down</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">move_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="move_left() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-left.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="move_right"><code>move_right()</code><a class="headerlink" href="#move_right" title="Permanent link">&para;</a></h3>
+<p>Moves the <code>element</code> right by the given <code>distance</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">move_right</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to move right.</li>
+<li><code>distance</code> (<code>int</code>): The distance the <code>element</code> should travel (in pixels).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">move_taco</span><span class="p">(</span><span class="n">pressed_key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+        <span class="n">move_up</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+        <span class="n">move_left</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">move_down</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">move_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="move_right() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-right.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="move_up"><code>move_up()</code><a class="headerlink" href="#move_up" title="Permanent link">&para;</a></h3>
+<p>Moves the <code>element</code> up by the given <code>distance</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">move_up</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">distance</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to move up.</li>
+<li><code>distance</code> (<code>int</code>): The distance the <code>element</code> should travel (in pixels).</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">move_taco</span><span class="p">(</span><span class="n">pressed_key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span>
+        <span class="n">move_up</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;a&quot;</span><span class="p">:</span>
+        <span class="n">move_left</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;s&quot;</span><span class="p">:</span>
+        <span class="n">move_down</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">pressed_key</span> <span class="o">==</span> <span class="s2">&quot;d&quot;</span><span class="p">:</span>
+        <span class="n">move_right</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">keydown</span><span class="p">(</span><span class="n">move_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="move_up() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/move-up.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="play_audio"><code>play_audio()</code><a class="headerlink" href="#play_audio" title="Permanent link">&para;</a></h3>
+<p>Plays the audio that <code>element</code> represents.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">play_audio</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The audio element to play.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">laugh_audio</span> <span class="o">=</span> <span class="n">add_audio</span><span class="p">(</span><span class="s2">&quot;laugh.mp3&quot;</span><span class="p">)</span>
+<span class="n">play_audio</span><span class="p">(</span><span class="n">laugh_audio</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+
+<h3 id="position_element"><code>position_element()</code><a class="headerlink" href="#position_element" title="Permanent link">&para;</a></h3>
+<p>Position the <code>element</code> at the given <code>x</code> and <code>y</code> position. The <code>x</code> and <code>y</code> arguments can be any <code>int</code>, or one of the position helpers:</p>
+<table>
+<thead>
+<tr>
+<th>Position</th>
+<th>Helper1</th>
+<th>Helper2</th>
+<th>Helper3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>x</code></td>
+<td><code>"left"</code></td>
+<td><code>"center"</code></td>
+<td><code>"right"</code></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td><code>"top"</code></td>
+<td><code>"center"</code></td>
+<td><code>"bottom"</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">position_element</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to position.</li>
+<li><code>x</code> (<code>int</code>|<code>str</code>): The desired x-position of the <code>element</code>.</li>
+<li><code>y</code> (<code>int</code>|<code>str</code>): The desired y-position of the <code>element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+</code></pre></div>
+<hr>
+
+<h3 id="set_background_color"><code>set_background_color()</code><a class="headerlink" href="#set_background_color" title="Permanent link">&para;</a></h3>
+<p>Sets the background color of the page to <code>color</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_background_color</span><span class="p">(</span><span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>color</code> (<code>str</code>): The desired background color.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_background_color</span><span class="p">(</span><span class="s2">&quot;darksalmon&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_background_color() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-background-color.png?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="set_element_width"><code>set_element_width()</code><a class="headerlink" href="#set_element_width" title="Permanent link">&para;</a></h3>
+<p>Sets the <code>element</code> to the given <code>width</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_element_width</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">width</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to adjust.</li>
+<li><code>width</code> (<code>int</code>): The desired width of the <code>element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">shrink_taco</span><span class="p">():</span>
+    <span class="n">set_element_width</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+
+
+<span class="n">shrink_taco_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Shrink Taco&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">shrink_taco_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">shrink_taco_button</span><span class="p">,</span> <span class="n">shrink_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_element_width() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-element-width.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="set_font_size"><code>set_font_size()</code><a class="headerlink" href="#set_font_size" title="Permanent link">&para;</a></h3>
+<p>Sets the font size of the <code>element</code> to the given <code>font_size</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_font_size</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">font_size</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to adjust.</li>
+<li><code>font_size</code> (<code>int</code>): The desired font_size of the <code>element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">shrink_text</span><span class="p">():</span>
+    <span class="n">set_font_size</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+
+
+<span class="n">shrink_text_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Shrink Font&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">shrink_text_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">text_element</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Shrink this text!&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">shrink_text_button</span><span class="p">,</span> <span class="n">shrink_text</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_font_size() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-font-size.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="set_interval"><code>set_interval()</code><a class="headerlink" href="#set_interval" title="Permanent link">&para;</a></h3>
+<p>Runs <code>function_to_run</code> every <code>time</code> seconds.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_interval</span><span class="p">(</span><span class="n">function_to_run</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>function_to_run</code> (<code>function</code>): The function to run.</li>
+<li><code>time</code> (<code>int</code>): The time (in seconds) to wait before running the <code>function_to_run</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">create_ship</span><span class="p">():</span>
+    <span class="n">ship</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;ship.png&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">position_element</span><span class="p">(</span><span class="n">ship</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">animate_right</span><span class="p">(</span><span class="n">ship</span><span class="p">,</span> <span class="mi">2500</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+
+
+<span class="n">set_interval</span><span class="p">(</span><span class="n">create_ship</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_interval() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-interval.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="set_text_color"><code>set_text_color()</code><a class="headerlink" href="#set_text_color" title="Permanent link">&para;</a></h3>
+<p>Sets the <code>color</code> of the <code>text_element</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_text_color</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="n">color</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text_element</code> (<code>element</code>): The text element to adjust.</li>
+<li><code>color</code> (<code>str</code>): The desired color of the <code>text_element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">red_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;This text is red&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">set_text_color</span><span class="p">(</span><span class="n">red_text</span><span class="p">,</span> <span class="s2">&quot;red&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_text_color() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-text-color.png?raw=true" width="200" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="set_text_decoration"><code>set_text_decoration()</code><a class="headerlink" href="#set_text_decoration" title="Permanent link">&para;</a></h3>
+<p>Sets the text decoration of the given <code>text_element</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_text_decoration</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="n">decoration_string</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text_element</code> (<code>element</code>): The text element to adjust.</li>
+<li><code>decoration_string</code> (<code>str</code>): The decoration string for the CSS property.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">text_element</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Never Gonna Give You Up&quot;</span><span class="p">,</span> <span class="mi">42</span><span class="p">)</span>
+<span class="n">set_text_decoration</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="s2">&quot;underline dotted blue&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_text_decoration() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-text-decoration.png?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<p>Read about different options for the decoration_string <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration">here</a></p>
+<h3 id="set_text_font"><code>set_text_font()</code><a class="headerlink" href="#set_text_font" title="Permanent link">&para;</a></h3>
+<p>This function allows you to change the font of a text element in your program.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_text_font</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="n">font_name</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text_element</code> (<code>element</code>): The text element to adjust.</li>
+<li><code>font_name</code> (<code>str</code>): The font to use for the <code>text_element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="n">game_over</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;GAME OVER&quot;</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">game_over</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+<span class="n">set_text_font</span><span class="p">(</span><span class="n">game_over</span><span class="p">,</span> <span class="s2">&quot;game&quot;</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Available Fonts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>game</td>
+</tr>
+<tr>
+<td>lora</td>
+</tr>
+<tr>
+<td>quicksand</td>
+</tr>
+<tr>
+<td>roboto</td>
+</tr>
+<tr>
+<td>nabla</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>set_text_font()</code> only works in <strong>E22: Logic with Python</strong></p>
+</div>
+<h3 id="set_timeout"><code>set_timeout()</code><a class="headerlink" href="#set_timeout" title="Permanent link">&para;</a></h3>
+<p>Runs <code>function_to_run</code> after <code>time</code> seconds.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">set_timeout</span><span class="p">(</span><span class="n">function_to_run</span><span class="p">,</span> <span class="n">time</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>function_to_run</code> (<code>function</code>): The function to run.</li>
+<li><code>time</code> (<code>int</code>): The time (in seconds) to wait before running the <code>function_to_run</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">show_boo_text</span><span class="p">():</span>
+    <span class="n">boo_text</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;BOO!!!&quot;</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+    <span class="n">position_element</span><span class="p">(</span><span class="n">boo_text</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+
+<span class="n">set_timeout</span><span class="p">(</span><span class="n">show_boo_text</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="set_timeout() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/set-timeout.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="update_text"><code>update_text()</code><a class="headerlink" href="#update_text" title="Permanent link">&para;</a></h3>
+<p>Changes the text in <code>text_element</code> to the <code>new_text</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">update_text</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="n">new_text</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>text_element</code> (<code>element</code>): The element to adjust.</li>
+<li><code>new_text</code> (<code>str</code>): The new text for the <code>text_element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">update_text_element</span><span class="p">():</span>
+    <span class="n">update_text</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="s2">&quot;Updated text&quot;</span><span class="p">)</span>
+
+
+<span class="n">text_element</span> <span class="o">=</span> <span class="n">add_text</span><span class="p">(</span><span class="s2">&quot;Original text&quot;</span><span class="p">,</span> <span class="mi">32</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">text_element</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">400</span><span class="p">)</span>
+
+<span class="n">update_text_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Update Text&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">update_text_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">update_text_button</span><span class="p">,</span> <span class="n">update_text_element</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="update_text() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/update-text.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="remove_element"><code>remove_element()</code><a class="headerlink" href="#remove_element" title="Permanent link">&para;</a></h3>
+<p>Removes the <code>element</code> from the page.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">remove_element</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to remove.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">remove_taco</span><span class="p">():</span>
+    <span class="n">remove_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">remove_taco_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Remove Taco&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">remove_taco_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">remove_taco_button</span><span class="p">,</span> <span class="n">remove_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="remove_element() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/remove-element.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="rotate_element"><code>rotate_element()</code><a class="headerlink" href="#rotate_element" title="Permanent link">&para;</a></h3>
+<p>Rotates the <code>element</code> by the given number of <code>degrees</code>.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">rotate_element</span><span class="p">(</span><span class="n">element</span><span class="p">,</span> <span class="n">degrees</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to rotate.</li>
+<li><code>degrees</code> (<code>int</code>): The number of degrees to rotate the <code>element</code>.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">rotate_taco</span><span class="p">():</span>
+    <span class="n">rotate_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">rotate_taco_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Rotate Taco&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">rotate_taco_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">rotate_taco_button</span><span class="p">,</span> <span class="n">rotate_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="rotate_element() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/rotate-element.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+<h3 id="vanish"><code>vanish()</code><a class="headerlink" href="#vanish" title="Permanent link">&para;</a></h3>
+<p>Removes the <code>element</code> from the page over a 1 second interval.</p>
+<hr>
+
+<p>Function signature:</p>
+<div class="highlight"><pre><span></span><code><span class="n">vanish</span><span class="p">(</span><span class="n">element</span><span class="p">)</span>
+</code></pre></div>
+<p>Parameters:</p>
+<ul>
+<li><code>element</code> (<code>element</code>): The element to remove.</li>
+</ul>
+<p>Example usage:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">vanish_taco</span><span class="p">():</span>
+    <span class="n">vanish</span><span class="p">(</span><span class="n">taco_image</span><span class="p">)</span>
+
+
+<span class="n">taco_image</span> <span class="o">=</span> <span class="n">add_image</span><span class="p">(</span><span class="s2">&quot;taco.jpg&quot;</span><span class="p">,</span> <span class="mi">200</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">taco_image</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="mi">300</span><span class="p">)</span>
+
+<span class="n">vanish_taco_button</span> <span class="o">=</span> <span class="n">add_button</span><span class="p">(</span><span class="s2">&quot;Vanish Taco&quot;</span><span class="p">)</span>
+<span class="n">position_element</span><span class="p">(</span><span class="n">vanish_taco_button</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">,</span> <span class="s2">&quot;center&quot;</span><span class="p">)</span>
+
+<span class="n">click</span><span class="p">(</span><span class="n">vanish_taco_button</span><span class="p">,</span> <span class="n">vanish_taco</span><span class="p">)</span>
+</code></pre></div>
+<p>Example output:</p>
+<figure>
+<p><img alt="vanish() example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/m11-wizardlib/vanish.gif?raw=true" width="300" /></p>
+<figcaption></figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CodeWizardsHQ
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>

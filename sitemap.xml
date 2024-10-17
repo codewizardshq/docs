@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>http://docs.codewizardshq.com/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/css/css/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/html/html/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/javascript/browser-apis-and-jquery/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/javascript/javascript-language/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/python/python-language/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/python/wizardlib/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+    <url>
+         <loc>http://docs.codewizardshq.com/sql/sql-language/</loc>
+         <lastmod>2024-10-17</lastmod>
+    </url>
+</urlset>

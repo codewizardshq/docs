@@ -1,0 +1,2542 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://docs.codewizardshq.com/html/html/">
+      
+      
+        <link rel="prev" href="../../css/css/">
+      
+      
+        <link rel="next" href="../../javascript/javascript-language/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.41">
+    
+    
+      
+        <title>HTML Language - CodeWizardsHQ Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-JR29D20SDK"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-JR29D20SDK",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-JR29D20SDK",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#html-language" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CodeWizardsHQ Documentation" class="md-header__button md-logo" aria-label="CodeWizardsHQ Documentation" data-md-component="logo">
+      
+  <img src="../../assets/lightHorizontal.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            CodeWizardsHQ Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              HTML Language
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/codewizardshq/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cwhq-docs
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="CodeWizardsHQ Documentation" class="md-nav__button md-logo" aria-label="CodeWizardsHQ Documentation" data-md-component="logo">
+      
+  <img src="../../assets/lightHorizontal.svg" alt="logo">
+
+    </a>
+    CodeWizardsHQ Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/codewizardshq/docs" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    cwhq-docs
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    CSS
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../css/css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CSS Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    HTML
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            HTML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    HTML Language
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    HTML Language
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-html-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic HTML Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic HTML Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-doctype-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DOCTYPE tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;html&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-head-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;head&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-title-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;title&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-body-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;body&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-additions-to-the-basic-html-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Additions To The Basic HTML Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Additions To The Basic HTML Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-meta-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;meta&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-link-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;link&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-script-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;script&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-style-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;style&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-give-text-meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements Give Text Meaning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements Give Text Meaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#well-structured-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Well-Structured HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poorly-structured-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poorly-Structured HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-broad-categories-of-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Broad Categories Of Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Broad Categories Of Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-level-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block-Level Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-level-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline-Level Elements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Navigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-different-directory-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples Of Different Directory Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-element-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Element References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#body-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms and Buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heading-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-video-and-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image, Video and Audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line-break-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Break Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nesting Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-tag-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Tag Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    JavaScript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/javascript-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    JavaScript Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../javascript/browser-apis-and-jquery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Browser APIs and jQuery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Python
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/python-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../python/wizardlib/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wizardlib
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SQL
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            SQL
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sql/sql-language/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SQL Language
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#basic-html-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic HTML Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basic HTML Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-doctype-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The DOCTYPE tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-html-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;html&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-head-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;head&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-title-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;title&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-body-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;body&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-additions-to-the-basic-html-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Common Additions To The Basic HTML Structure
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Additions To The Basic HTML Structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-meta-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;meta&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-link-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;link&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-script-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;script&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-style-tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      The &lt;style&gt; tag
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elements-give-text-meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elements Give Text Meaning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Elements Give Text Meaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#well-structured-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Well-Structured HTML
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poorly-structured-html" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poorly-Structured HTML
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#two-broad-categories-of-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Two Broad Categories Of Elements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two Broad Categories Of Elements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#block-level-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Block-Level Elements
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#inline-level-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline-Level Elements
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#directory-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directory Navigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directory Navigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-directory-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Directory Structure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-different-directory-paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples Of Different Directory Paths
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-element-references" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Element References
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#body-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      Body Text
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comments" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comments
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#containers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Containers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#forms-and-buttons" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms and Buttons
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#heading-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heading Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#image-video-and-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image, Video and Audio
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line-break-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Line Break Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    <span class="md-ellipsis">
+      Links
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      List Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nesting-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nesting Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-tag-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Single Tag Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="html-language">HTML Language<a class="headerlink" href="#html-language" title="Permanent link">&para;</a></h1>
+<p>HTML (HyperText Markup Language) is used to define the structure of a webpage. Think of it like the frame of a house. When you visit a website, an HTML page is what the browser parses to display all of the content on the page!</p>
+<p>We use HTML in the following courses at CWHQ:</p>
+<table>
+<thead>
+<tr>
+<th>Elementary</th>
+<th>Middle School</th>
+<th>High School</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fundamental Programming Concepts</td>
+<td>Webpages with HTML &amp; CSS</td>
+<td>Fundamentals of Web Development</td>
+</tr>
+<tr>
+<td>Web Development For Kids - 1</td>
+<td>Capstone 1</td>
+<td>User Interface Development</td>
+</tr>
+<tr>
+<td>Web Development For Kids - 2</td>
+<td>User Interface Development</td>
+<td>Capstone 1</td>
+</tr>
+<tr>
+<td>Creating Websites with HTML/CSS</td>
+<td>Responsive Web Development</td>
+<td>APIs and Databases</td>
+</tr>
+<tr>
+<td>Responsive Websites with HTML/CSS</td>
+<td>Interactive JavaScript</td>
+<td>Professional Web App Development</td>
+</tr>
+<tr>
+<td>Interactive Websites with JavaScript</td>
+<td>Web Interfaces</td>
+<td>Modern CSS Frameworks</td>
+</tr>
+<tr>
+<td>Capstone 3</td>
+<td>Capstone 2</td>
+<td>Capstone 2</td>
+</tr>
+<tr>
+<td></td>
+<td>Mastering APIs</td>
+<td>Mastering MVC Framework</td>
+</tr>
+<tr>
+<td></td>
+<td>Capstone 3</td>
+<td>Object Relational Mapping</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>DevOps and Software Engineering</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>Capstone 3</td>
+</tr>
+</tbody>
+</table>
+<p>In this section of our documentation, you'll find references to most of the core HTML language features that we use in our CodeWizardsHQ courses.</p>
+<p>You'll also find many <em>Further reading</em> sections, which pull from this excellent HTML resource:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">MDN HTML Docs</a></li>
+</ul>
+<hr>
+
+<h2 id="basic-html-structure">Basic HTML Structure<a class="headerlink" href="#basic-html-structure" title="Permanent link">&para;</a></h2>
+<p>HTML documents have a standard basic form which looks like this:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>[INSERT TILE HERE]<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- INSERT HTML CONTENT TAGS HERE --&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-doctype-tag">The <code>DOCTYPE</code> tag<a class="headerlink" href="#the-doctype-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>DOCTYPE</code> is the first tag in an HTML document, and it's required to ensure the browser parses an HTML document correctly. If you leave it out, strange things can happen depending on the user's browser settings:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+</code></pre></div>
+<h4 id="the-html-tag">The <code>&lt;html&gt;</code> tag<a class="headerlink" href="#the-html-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;html&gt;</code> tag is used to hold the contents of an HTML document, which will consist of a <code>&lt;head&gt;</code> and a <code>&lt;body&gt;</code>. The HTML document ends at the <code>&lt;/html&gt;</code> tag.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Everything in here is part of the HTML document --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-head-tag">The <code>&lt;head&gt;</code> tag<a class="headerlink" href="#the-head-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;head&gt;</code> tag is used to hold information about the HTML document that shouldn't appear on the page (like the title, character encoding, etc.) and is also used to pull in external resources (like CSS or JavaScript).</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- This is for information about the document or linking external resources --&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-title-tag">The <code>&lt;title&gt;</code> tag<a class="headerlink" href="#the-title-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;title&gt;</code> tag appears in the browser tab and should be included in all HTML documents.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>This appears in the browser tab<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Browser Tab Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/browser-tab.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h4 id="the-body-tag">The <code>&lt;body&gt;</code> tag<a class="headerlink" href="#the-body-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;body&gt;</code> tag holds all of the HTML content that will appear on the page. This is the content you want the user to see.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>This appears in the browser tab<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This appears on the page<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>So does this<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTML On Page" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/html-on-page.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document">MDN - Anatomy of an HTML Document</a></li>
+</ul>
+<h2 id="common-additions-to-the-basic-html-structure">Common Additions To The Basic HTML Structure<a class="headerlink" href="#common-additions-to-the-basic-html-structure" title="Permanent link">&para;</a></h2>
+<p>If you explore HTML documents on your favorite websites, you'll see that there are many variations on the basic HTML structure shown above. We'll discuss a few common additional tags that you'll see at CWHQ in this section, such as the <code>&lt;style&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;script&gt;</code>, and <code>&lt;meta&gt;</code> tags.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Common Additions To The Basic HTML Structure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;game-logic.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This appears on the page, and is red!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            This appears on the page and is black (the default color for text)
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">paragraphElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">paragraphElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;I can build HTML from JavaScript!&quot;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">paragraphElement</span><span class="p">);</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Common Additions To Basic HTML" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/common-additions.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h4 id="the-meta-tag">The <code>&lt;meta&gt;</code> tag<a class="headerlink" href="#the-meta-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;meta&gt;</code> tag can be used to add different information about the document, such as the author, character encoding, whether it should be responsive to different screen sizes, etc. In the example below, we tell the browser that it should be responsive to different screen sizes using the <code>&lt;meta&gt;</code> tag:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Common Additions To The Basic HTML Structure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Please take into consideration the device I&#39;m being viewed on </span>
+<span class="cm">        for sizing things! --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-link-tag">The <code>&lt;link&gt;</code> tag<a class="headerlink" href="#the-link-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;link&gt;</code> tag is commonly used to include an external CSS stylesheet, either from your own filesystem or externally from somewhere like Google Fonts. In the example below, we include a stylesheet from our filesystem called <code>style.css</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Common Additions To The Basic HTML Structure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Include all the CSS style rules from `style.css` in this </span>
+<span class="cm">        HTML document --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-script-tag">The <code>&lt;script&gt;</code> tag<a class="headerlink" href="#the-script-tag" title="Permanent link">&para;</a></h4>
+<p>You can include a <code>&lt;script&gt;</code> tag in the <code>&lt;head&gt;</code> or at the end of the <code>&lt;body&gt;</code> in an HTML document. If you use the <code>src</code> attribute, the <code>&lt;script&gt;</code> tag pulls JavaScript data from an external file. If you don't use the <code>src</code> attribute, you write the JavaScript directly in the HTML document.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Common Additions To The Basic HTML Structure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Please add the JavaScript code from `game-logic.js` into</span>
+<span class="cm">        this file --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;game-logic.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Add all HTML content here --&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="c1">// This JavaScript logic can be written directly in the HTML file</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">paragraphElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">paragraphElement</span><span class="p">.</span><span class="nx">textContent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;I can build HTML from JavaScript!&quot;</span><span class="p">;</span>
+
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">body</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">paragraphElement</span><span class="p">);</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="the-style-tag">The <code>&lt;style&gt;</code> tag<a class="headerlink" href="#the-style-tag" title="Permanent link">&para;</a></h4>
+<p>The <code>&lt;style&gt;</code> tag can be used to add CSS directly in an HTML document instead of pulling it from an external file.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Common Additions To The Basic HTML Structure<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="cm">&lt;!-- Please add these CSS styles to anything in the `&lt;body&gt;` that</span>
+<span class="cm">        I target with a CSS selector --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>This appears on the page, and is red!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            This appears on the page and is black (the default color for text)
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML">MDN - Metadata in HTML</a></li>
+</ul>
+<h2 id="elements-give-text-meaning">Elements Give Text Meaning<a class="headerlink" href="#elements-give-text-meaning" title="Permanent link">&para;</a></h2>
+<p>HTML elements (or tags) that you use in the <code>&lt;body&gt;</code> of an HTML document should be used to give text structure and meaning. Use the right tag for the right job!</p>
+<p>For example, the <code>&lt;p&gt;</code> tag is used to display generic text while the <code>&lt;h1&gt;</code> tag is used to display the top-level title or headline of your page. You use the <code>&lt;img&gt;</code> tag to display images.</p>
+<h4 id="well-structured-html">Well-Structured HTML<a class="headerlink" href="#well-structured-html" title="Permanent link">&para;</a></h4>
+<p>If we were making a page about tacos and wanted to have a title, some text, and an image, this would be a good structure:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tacos - Homepage<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>My Favorite Taco<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            I think that all tacos are amazing, but my favorite is probably the
+            Carne Asada taco. It&#39;s filled with steak, and you can add
+            onions/cilantro/lime to the top. You can optionally add guacamole as
+            well, which I highly recommend!
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;taco.jpg&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Taco Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/taco-example.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h4 id="poorly-structured-html">Poorly-Structured HTML<a class="headerlink" href="#poorly-structured-html" title="Permanent link">&para;</a></h4>
+<p>In contrast, we could make the same page like this:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tacos - Homepage<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nt">p</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">42</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="nt">h1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">font-size</span><span class="p">:</span><span class="w"> </span><span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">taco-image</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">background-image</span><span class="p">:</span><span class="w"> </span><span class="nb">url</span><span class="p">(</span><span class="sx">taco.jpg</span><span class="p">);</span>
+<span class="w">                </span><span class="k">background-size</span><span class="p">:</span><span class="w"> </span><span class="kc">contain</span><span class="p">;</span>
+<span class="w">                </span><span class="k">background-repeat</span><span class="p">:</span><span class="w"> </span><span class="kc">no-repeat</span><span class="p">;</span>
+<span class="w">                </span><span class="k">width</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">                </span><span class="k">height</span><span class="p">:</span><span class="w"> </span><span class="mi">500</span><span class="kt">px</span><span class="p">;</span>
+<span class="w">                </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">block</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>My Favorite Taco<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+            I think that all tacos are amazing, but my favorite is probably the
+            Carne Asada taco. It&#39;s filled with steak, and you can add
+            onions/cilantro/lime to the top. You can optionally add guacamole as
+            well, which I highly recommend!
+        <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taco-image&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Taco Bad HTML Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/taco-bad-html.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p>This is not well-structured HTML because we're not using the right element for the right job anywhere! Instead, we're trying to use CSS to make the <code>&lt;p&gt;</code> tag big and the <code>&lt;h1&gt;</code> tag small, and the <code>&lt;span&gt;</code> is holding an image instead of an <code>&lt;img&gt;</code> tag. Why use all of that CSS when you could use the natural element for the job? As a rule, always structure your page with the correct tags first, and then you can add CSS to style them later.</p>
+<h2 id="two-broad-categories-of-elements">Two Broad Categories Of Elements<a class="headerlink" href="#two-broad-categories-of-elements" title="Permanent link">&para;</a></h2>
+<p>HTML elements fall into two broad categories, block-level and inline-level. Block-level elements appear on their own lines, and inline-level elements do not.</p>
+<h4 id="block-level-elements">Block-Level Elements<a class="headerlink" href="#block-level-elements" title="Permanent link">&para;</a></h4>
+<p>Some standard block elements are <code>&lt;p&gt;</code>, all of the heading tags (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>), the <code>&lt;div&gt;</code>, <code>&lt;form&gt;</code> elements, and many more:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Block-Level Elements<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>All headings are block-level elements.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Paragraph tags too.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Everything in this form is a single block<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter your name&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Block-Level Elements Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/block-level-elements.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h4 id="inline-level-elements">Inline-Level Elements<a class="headerlink" href="#inline-level-elements" title="Permanent link">&para;</a></h4>
+<p>Some standard inline elements are <code>&lt;span&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code> elements, along with many others:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Inline-Level Elements<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nt">span</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>All headings are block-level elements.<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+            The <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>span element is inline.<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>We also added some CSS to
+            make it stand out.
+        <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                Everything in this form is a single block, but notice how the
+                input, image, and button are all on the same line.
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;taco.jpg&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter your name&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Inline Elements Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/inline-level-elements.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h2 id="directory-navigation">Directory Navigation<a class="headerlink" href="#directory-navigation" title="Permanent link">&para;</a></h2>
+<p>When linking external files like images, audio, video, or JavaScript/CSS, you need to understand where the asset is located in your project folder. Programmers generally call folders <strong>directories</strong>, and we'll use that term throughout this section.</p>
+<h3 id="example-directory-structure">Example Directory Structure<a class="headerlink" href="#example-directory-structure" title="Permanent link">&para;</a></h3>
+<p>Consider the following directory structure:</p>
+<div class="highlight"><pre><span></span><code>my-website
+├── home
+│   ├── home.html
+│   ├── never-gonna-give-you-up.mp3
+│   └── scripts
+│       └── loader.js
+├── images
+│   └── profile-pic.jpg
+└── style.css
+</code></pre></div>
+<p><code>my-website</code> is what's known as the <strong>root</strong> of this directory tree. To navigate to directories or files in this directory tree, you use a <strong>path</strong>, which is a series of directories/files separated by <code>/</code> characters.</p>
+<h3 id="examples-of-different-directory-paths">Examples Of Different Directory Paths<a class="headerlink" href="#examples-of-different-directory-paths" title="Permanent link">&para;</a></h3>
+<p>There are a four common ways to navigate between directories:</p>
+<ol>
+<li>Downwards</li>
+<li>Upwards</li>
+<li>Upwards and Downwards</li>
+<li>Same Directory</li>
+</ol>
+<p>If we're thinking from <code>index.html</code> for all of these examples, then <code>loader.js</code> is <strong>downwards</strong> from that file.</p>
+<p>So, the path to <code>loader.js</code> from <code>index.html</code> is:</p>
+<div class="highlight"><pre><span></span><code>scripts/loader.js
+</code></pre></div>
+<p>You can also navigate <strong>upward</strong> using <code>../</code>.</p>
+<p>So, the path from <code>index.html</code> to <code>style.css</code> is:</p>
+<div class="highlight"><pre><span></span><code>../style.css
+</code></pre></div>
+<p>Navigating upwards and downwards combines the two techniques shown above.</p>
+<p>So, the path from <code>index.html</code> to <code>profile-pic.jpg</code> is:</p>
+<div class="highlight"><pre><span></span><code>../images/profile-pic.jpg
+</code></pre></div>
+<p>Finally, if the asset you want to include is in the same project folder, you don't need any <code>/</code> or <code>../</code>, you just reference the name of the asset.</p>
+<p>So, the path from <code>index.html</code> to <code>never-gonna-give-you-up.mp3</code> is:</p>
+<div class="highlight"><pre><span></span><code>never-gonna-give-you-up.mp3
+</code></pre></div>
+<p>Putting this all together, here's how we could include <code>loader.js</code>, <code>style.css</code>, <code>profile-pic.jpg</code>, and <code>never-gonna-give-you-up.mp3</code> in our <code>index.html</code> file:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;../style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Directory Navigation Example<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;../images/profile-pic.jpg&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">audio</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;never-gonna-give-you-up.mp3&quot;</span> <span class="na">controls</span><span class="p">&gt;&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;scripts/loader.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h2 id="html-element-references">HTML Element References<a class="headerlink" href="#html-element-references" title="Permanent link">&para;</a></h2>
+<p>Below are some of the common HTML Elements you may use:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;html&gt;</code></td>
+<td>Holds content of HTML Document</td>
+</tr>
+<tr>
+<td><code>&lt;head&gt;</code></td>
+<td>Holds information about the HTML Document</td>
+</tr>
+<tr>
+<td><code>&lt;title&gt;</code></td>
+<td>Title appears on browser tab</td>
+</tr>
+<tr>
+<td><code>&lt;body&gt;</code></td>
+<td>Holds all HTML Content</td>
+</tr>
+<tr>
+<td><code>&lt;link&gt;</code></td>
+<td>Link external resource like CSS stylesheet</td>
+</tr>
+<tr>
+<td><code>&lt;meta&gt;</code></td>
+<td>Holds metadata about document</td>
+</tr>
+<tr>
+<td><code>&lt;style&gt;</code></td>
+<td>Apply CSS styling to elements</td>
+</tr>
+<tr>
+<td><code>&lt;h1&gt; - &lt;h6&gt;</code></td>
+<td>6 levels of section headings</td>
+</tr>
+<tr>
+<td><code>&lt;div&gt;</code></td>
+<td>Creates a division within the HTML Document</td>
+</tr>
+<tr>
+<td><code>&lt;br&gt;</code></td>
+<td>Line Break</td>
+</tr>
+<tr>
+<td><code>&lt;ol&gt;</code></td>
+<td>Defines an Ordered List</td>
+</tr>
+<tr>
+<td><code>&lt;ul&gt;</code></td>
+<td>Defines an Unordered List</td>
+</tr>
+<tr>
+<td><code>&lt;li&gt;</code></td>
+<td>Defines list items</td>
+</tr>
+<tr>
+<td><code>&lt;p&gt;</code></td>
+<td>Defines paragraphs in the document</td>
+</tr>
+<tr>
+<td><code>&lt;a&gt;</code></td>
+<td>Creates hyperlink to other webpages</td>
+</tr>
+<tr>
+<td><code>&lt;audio&gt;</code></td>
+<td>Add audio</td>
+</tr>
+<tr>
+<td><code>&lt;img&gt;</code></td>
+<td>Add images</td>
+</tr>
+<tr>
+<td><code>&lt;video&gt;</code></td>
+<td>Add video</td>
+</tr>
+<tr>
+<td><code>&lt;iframe&gt;</code></td>
+<td>Embeds other HTML pages in the current webpage</td>
+</tr>
+<tr>
+<td><code>&lt;script&gt;</code></td>
+<td>Embeds or refers to Javascript in the document</td>
+</tr>
+<tr>
+<td><code>&lt;table&gt;</code></td>
+<td>Create tables</td>
+</tr>
+<tr>
+<td><code>&lt;form&gt;</code></td>
+<td>Create a section for submitting a form</td>
+</tr>
+<tr>
+<td><code>&lt;button&gt;</code></td>
+<td>Adds a button used for interactivity</td>
+</tr>
+<tr>
+<td><code>&lt;input&gt;</code></td>
+<td>Creates an input field</td>
+</tr>
+<tr>
+<td><code>&lt;select&gt;</code></td>
+<td>Creates drop down menu</td>
+</tr>
+<tr>
+<td><code>&lt;option&gt;</code></td>
+<td>Defines an item within the select element</td>
+</tr>
+</tbody>
+</table>
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<p>HTML attributes allow you to provide additional information about each element. Here are a few examples of common attributes:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Attributes<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;color: green;&quot;</span><span class="p">&gt;</span>Tacos!!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;tacos.png&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;taco&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">contenteditable</span><span class="o">=</span><span class="s">&quot;true&quot;</span><span class="p">&gt;</span>This paragraph can be edited!<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tacos.html&quot;</span><span class="p">&gt;</span> Click here for more tacos! <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLattributes Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLattributes.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#attributes">MDN - Attributes</a></li>
+</ul>
+<h2 id="body-text">Body Text<a class="headerlink" href="#body-text" title="Permanent link">&para;</a></h2>
+<p>In the <code>&lt;body&gt;</code> of an HTML document, you can add elements that contain text which the user sees on the page. The <code>&lt;p&gt;</code> tag is a generic text element, but you can also use elements like <code>&lt;em&gt;</code>, <code>&lt;strong&gt;</code> and <code>&lt;cite&gt;</code> to give your body text meaning.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Body Text<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="nt">em</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">color</span><span class="p">:</span><span class="w"> </span><span class="kc">red</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+               <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Coding<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> teaches children how to resolve complex problems by breaking them down into smaller problems. A mastery of this process, called decomposition, is an integral life skill that benefits students whether they pursue a profession in technology or in any other field. Making mistakes, testing work, and correcting errors give kids the confidence to move beyond the problem with resilience.&quot;
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                 Learning to code is often described as tackling a new language and it may seem that this translation of symbols and information stems from the language processing part of the brain. <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span> Computer programming <span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>is also thought to employ the same skills as learning complex math problems, thereby exercising the left hemisphere.
+             <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+             <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                 Read more
+                 <span class="p">&lt;</span><span class="nt">cite</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.codewizardshq.com/coding-cognitive-development/&quot;</span><span class="p">&gt;</span>4 Ways That Coding Fuels Cognitive Development<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;</span><span class="nt">cite</span><span class="p">&gt;</span>
+             <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLBody Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLBody.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals">MDN - HTML Text Fundamentals</a></li>
+</ul>
+<h2 id="comments">Comments<a class="headerlink" href="#comments" title="Permanent link">&para;</a></h2>
+<p>HTML comments allow us to write notes, hide content, and disable code in the event of a bug. They are not visible to viewers of your HTML page unless they view the page's source code.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Comments<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="cm">&lt;!-- This is an important note! --&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>HTML Comments<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- &lt;p&gt; This tag is now &quot;turned off&quot; &lt;/p&gt; --&gt;</span>
+
+            <span class="cm">&lt;!-- You can also make </span>
+<span class="cm">            multi-line comments as well! </span>
+<span class="cm">            --&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTML comments example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/html-comments.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#html_comments">MDN - Comments</a></li>
+</ul>
+<h2 id="containers">Containers<a class="headerlink" href="#containers" title="Permanent link">&para;</a></h2>
+<p>HTML containers allow you to divide your content into sections. The <code>&lt;div&gt;</code> element is a good illustration of how to divide two containers. They can use the class property to share styling, but they can also have their own styling and content.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Containers<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">            </span><span class="p">.</span><span class="nc">division</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">inline-block</span><span class="p">;</span>
+<span class="w">                </span><span class="k">text-align</span><span class="p">:</span><span class="w"> </span><span class="kc">center</span><span class="p">;</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">team1</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.466</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="p">#</span><span class="nn">team2</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">background-color</span><span class="p">:</span><span class="w"> </span><span class="nb">rgba</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span><span class="w"> </span><span class="mf">0.425</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;division&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;team1&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Bob<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;monster1.png&quot;</span> <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Rank: 50<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;division&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;team2&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Jack<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;monster2.png&quot;</span> <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Rank: 100<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLcontainers Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLcontainers.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure#non-semantic_wrappers">MDN - Non-semantic Wrappers</a></li>
+</ul>
+<h2 id="forms-and-buttons">Forms and Buttons<a class="headerlink" href="#forms-and-buttons" title="Permanent link">&para;</a></h2>
+<p>You can create a form section to submit information using the HTML <code>&lt;form&gt;</code> element.
+The <code>&lt;input&gt;</code> element is used within the form element, and the <code>type</code> attribute can be used to display different types of inputs. We are also using the <code>&lt;button&gt;</code> tag to submit the form. </p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Forms and Buttons<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span>
+                    <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+                    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter Name&quot;</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;name&quot;</span>
+                    <span class="na">required</span>
+                <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span>
+                    <span class="na">type</span><span class="o">=</span><span class="s">&quot;email&quot;</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;senderEmail&quot;</span>
+                    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter Email&quot;</span>
+                    <span class="na">required</span>
+                <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">input</span>
+                    <span class="na">type</span><span class="o">=</span><span class="s">&quot;number&quot;</span>
+                    <span class="na">id</span><span class="o">=</span><span class="s">&quot;senderNumber&quot;</span>
+                    <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter Number&quot;</span>
+                    <span class="na">required</span>
+                <span class="p">/&gt;</span>
+                <span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>Choose Programming Language<span class="p">&lt;/</span><span class="nt">label</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">select</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Javascript<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">option</span><span class="p">&gt;</span>Java<span class="p">&lt;/</span><span class="nt">option</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">select</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Submit<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLforms Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/forms.gif?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/Forms">MDN - Forms</a></li>
+</ul>
+<h2 id="heading-elements">Heading Elements<a class="headerlink" href="#heading-elements" title="Permanent link">&para;</a></h2>
+<p>HTML headings allow you to define headings using section levels. <code>&lt;h1&gt;</code> Represents the highest level <code>&lt;h6&gt;</code> represents the lowest level.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Headings<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;info&quot;</span><span class="p">&gt;</span>
+                <span class="cm">&lt;!-- Note: Using only one h1 is recommended --&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Welcome to my page!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Bob the <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>Epic<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;</span> programmer!<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;section2&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Favorite Programming Languages<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Javascript<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Python<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+                <span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Favorite Games<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Roblox<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Minecraft<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;projects&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Python Project<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;pythonproject.html&quot;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Javascript Project<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;javascriptproject.html&quot;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLheadings Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLheadings.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#the_basics_headings_and_paragraphs">MDN - Headings and Paragraphs</a></li>
+</ul>
+<h2 id="image-video-and-audio">Image, Video and Audio<a class="headerlink" href="#image-video-and-audio" title="Permanent link">&para;</a></h2>
+<p>The <code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;audio&gt;</code> elements can be used to embed specific media. The <code>src</code> attribute is used by all elements.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Image, Video and Audio<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Taco Party!<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- This image is located in the child folder images --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;images/tacos.png&quot;</span> <span class="p">/&gt;</span>
+
+            <span class="cm">&lt;!-- The Video Element uses additional attributes controls and poster --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">video</span>
+                <span class="na">src</span><span class="o">=</span><span class="s">&quot;videos/tacos.mp4&quot;</span>
+                <span class="na">controls</span>
+                <span class="na">poster</span><span class="o">=</span><span class="s">&quot;images/tacos.png&quot;</span>
+            <span class="p">&gt;&lt;/</span><span class="nt">video</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- The Audio Element uses additional attributes controls, loop, autoplay --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">audio</span>
+                <span class="na">src</span><span class="o">=</span><span class="s">&quot;audio/never-gonna-give-you-up.mp3&quot;</span>
+                <span class="na">controls</span>
+                <span class="na">loop</span>
+                <span class="na">autoplay</span>
+            <span class="p">&gt;&lt;/</span><span class="nt">audio</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLimg&amp;video Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/media.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML">MDN - Images in HTML</a></li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content">MDN - Video and Audio Content</a></li>
+</ul>
+<h2 id="line-break-elements">Line Break Elements<a class="headerlink" href="#line-break-elements" title="Permanent link">&para;</a></h2>
+<p>For creating breaks in the content, use the line break <code>&lt;br&gt;</code> tag or the <code>&lt;hr&gt;</code> tag, which makes a horizontal line break.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Line Break<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Line Break <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;taco.jpg&quot;</span> <span class="p">/&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>  The line break <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> tag or the <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span> tag, which generates a horizontal line break, are two more useful single tag elements. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="linebreak Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/linebreak.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/br">MDN - The Line Break Element</a></li>
+</ul>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<p>HTML Links allow you to link to other webpages using <code>&lt;a&gt;</code> tag with the <code>href</code> attribute.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Links<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="cm">&lt;!-- Inline vs Block Links --&gt;</span>
+
+            <span class="cm">&lt;!-- Inline --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.codewizardshq.com&quot;</span><span class="p">&gt;</span> CodeWizardsHQ <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- Block, makes the &lt;img&gt; tag clickable --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.codewizardshq.com&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;cwhq.png&quot;</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;cwhq&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- </span>
+<span class="cm">                Document fragment by id, will jump to the section </span>
+<span class="cm">                of the document with the `summer` id </span>
+<span class="cm">            --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#summer&quot;</span><span class="p">&gt;</span>Check out our Program Section!<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;summer&quot;</span><span class="p">&gt;</span>Elementary, Middle School, High School<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">hr</span> <span class="p">/&gt;</span>
+            <span class="cm">&lt;!-- Relative vs Absolute URLs --&gt;</span>
+
+            <span class="cm">&lt;!-- Relative URL --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;index/index.html&quot;</span>
+                <span class="p">&gt;</span>This will link us to a file within the same directory.<span class="p">&lt;/</span><span class="nt">a</span>
+            <span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- Absolute URL  --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.codewizardshq.com&quot;</span>
+                <span class="p">&gt;</span>This will link us to any web page using the absolute url.<span class="p">&lt;/</span><span class="nt">a</span>
+            <span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLlinks Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLlinks.gif?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks">MDN - Creating hyperlinks</a></li>
+</ul>
+<h2 id="list-elements">List Elements<a class="headerlink" href="#list-elements" title="Permanent link">&para;</a></h2>
+<p>HTML lists allow you to make a structured list. Both list elements use the <code>&lt;li&gt;</code> tag to define each item.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Lists<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="cm">&lt;!-- </span>
+<span class="cm">                This is an unordered list element. The items on this list </span>
+<span class="cm">                will be bulleted. </span>
+<span class="cm">            --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list1&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Favorite Foods<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Tacos<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pasta<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Pizza<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+            <span class="cm">&lt;!-- </span>
+<span class="cm">                This is an ordered list element. The &#39;type&#39; attribute can </span>
+<span class="cm">                be used to adjust the order of this list, which can be </span>
+<span class="cm">                either alphabetical or numerical.  </span>
+<span class="cm">            --&gt;</span>
+            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list2&quot;</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Favorite Snacks<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+                <span class="p">&lt;</span><span class="nt">ol</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Dark Chocolate<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>Sugar Cookies<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>BBQ Chips<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLlists Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLlists.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals#lists">MDN - Lists</a></li>
+</ul>
+<h2 id="nesting-elements">Nesting Elements<a class="headerlink" href="#nesting-elements" title="Permanent link">&para;</a></h2>
+<p>Elements can be nested inside each other. This is most common with elements like the <code>&lt;div&gt;</code> and <code>&lt;form&gt;</code>, but you can also nest other tags, like adding content inside the <code>&lt;a&gt;</code> tag to make elements into links:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Nesting Elements<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>It&#39;s common to nest things inside of a div.<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Especially when you want content to be grouped together.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                Forms rely on input elements being nested inside them so the
+                information can be sent to a webserver
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter your name&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">input</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Enter your password&quot;</span> <span class="p">/&gt;</span>
+            <span class="p">&lt;</span><span class="nt">button</span><span class="p">&gt;</span>Login<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+
+        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://www.example.com&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>You can nest stuff inside of anchor tags to create links.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>
+                Click on anything in this green box to get taken to
+                www.example.com
+            <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;taco.jpg&quot;</span> <span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="Nesting Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/nesting-example.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h2 id="single-tag-elements">Single Tag Elements<a class="headerlink" href="#single-tag-elements" title="Permanent link">&para;</a></h2>
+<p>Elements can also be single tag elements. There is no need for a closing tag for these tags because there is no content between them. The most common single tag elements are <code>&lt;img&gt;</code> and <code>&lt;link&gt;</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Single Tag Elements<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Below is the img tag, which uses the src attribute to display the image <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">img</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;taco.jpg&quot;</span> <span class="p">/&gt;</span>
+
+            <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> The line break <span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span> tag or the <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span> tag, which generates a horizontal line break, are two more useful single tag elements. <span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="singleTagElements Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/singletagelements.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<h2 id="table">Table<a class="headerlink" href="#table" title="Permanent link">&para;</a></h2>
+<p>You can use the following table elements to create a structured table.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Tables<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;style.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Tables<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+            <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span>
+                <span class="cm">&lt;!-- Table Row --&gt;</span>
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="cm">&lt;!-- Table Headers  --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Name<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Subject<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">th</span><span class="p">&gt;</span>Grade<span class="p">&lt;/</span><span class="nt">th</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="cm">&lt;!-- Table Data --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Bob<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Math<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>85<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+
+                <span class="p">&lt;</span><span class="nt">tr</span><span class="p">&gt;</span>
+                    <span class="cm">&lt;!-- Table Data --&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Abigail<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>Programming<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                    <span class="p">&lt;</span><span class="nt">td</span><span class="p">&gt;</span>99<span class="p">&lt;/</span><span class="nt">td</span><span class="p">&gt;</span>
+                <span class="p">&lt;/</span><span class="nt">tr</span><span class="p">&gt;</span>
+            <span class="p">&lt;/</span><span class="nt">table</span><span class="p">&gt;</span>
+        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<figure>
+<p><img alt="HTMLTables Example" src="https://github.com/codewizardshq/docs/blob/main/docs/assets/html/HTMLtables.png?raw=true" width="100%" /></p>
+<figcaption></figcaption>
+</figure>
+<p><strong>Further Reading</strong></p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics">MDN - Table Basics</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2016 - 2022 CodeWizardsHQ
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "search.suggest"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
